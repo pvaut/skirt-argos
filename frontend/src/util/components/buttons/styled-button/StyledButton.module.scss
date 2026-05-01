@@ -1,0 +1,49 @@
+.button,
+.buttonDisabled {
+    width: 150px;
+    height: 50px;
+    box-sizing: border-box;
+    padding: 10px;
+    margin: 0;
+    // background: var(  --color-sp1);
+    background: linear-gradient(to right,
+            color-mix(in srgb, var(--color-sp1) 90%, var(--color-bg3)) 0%,
+            var(--color-sp1) 30%,
+            var(--color-sp1) 50%,
+            color-mix(in srgb, var(--color-sp1) 80%, var(--color-bg3)) 100%,
+        );
+    color: var(--color-bg3);
+    font-weight: bold;
+
+    border-radius: 3px;
+
+    box-shadow: 0 0 5px var(--color-shadow2);
+
+    display: flex;
+    align-items: center;
+    /* Vertical centering */
+    // justify-content: center; /* Optional: Horizontal centering */
+    // text-align: center; /* Optional: Center text horizontally */
+
+    transition: transform 0.2s;
+}
+
+.button {
+    cursor: pointer;
+
+    &:hover {
+        background: linear-gradient(to right,
+                color-mix(in srgb, var(--color-sp1) 100%, var(--color-bg3)) 0%,
+                color-mix(in srgb, var(--color-sp1) 80%, var(--color-fg)) 30%,
+                color-mix(in srgb, var(--color-sp1) 80%, var(--color-fg)) 50%,
+                color-mix(in srgb, var(--color-sp1) 100%, var(--color-bg3)) 100%,
+            );
+        transform: scale(1.05);
+    }
+
+}
+
+
+.buttonDisabled {
+    background: color-mix(in srgb, var(--color-sp1) 30%, var(--color-bg1));
+}

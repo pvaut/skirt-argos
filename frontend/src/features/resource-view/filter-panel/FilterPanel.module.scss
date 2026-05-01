@@ -1,0 +1,135 @@
+.tableWrapper {
+    display: block;
+}
+
+.filterStep,
+.filterStepSelectable,
+.filterStepDisabled {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 7px 15px;
+    text-align: center;
+    font-size: 90%;
+}
+
+.filterStepDisabled {
+    color: color-mix(in srgb, var(--color-fg) 50%, transparent);
+}
+
+.filterStepSelectable {
+    cursor: pointer;
+
+    &:hover {
+        background: color-mix(in srgb, var(--color-fg) 15%, transparent);
+    }
+}
+
+.closeButton {
+    opacity: 0;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+    font-size: 16px;
+
+    &:hover {
+        transform: scale(1.2);
+        opacity: 1 !important;
+    }
+
+    transition: transform 0.2s;
+
+}
+
+.filterStep:hover,
+.filterStepSelectable:hover {
+    .closeButton {
+        opacity: 0.7;
+    }
+}
+
+.tag {
+    box-sizing: border-box;
+    width: calc(100% - 30px);
+    padding: 10px;
+    margin: 15px;
+    text-align: center;
+    font-size: 90%;
+    font-weight: bold;
+    border-radius: 15px;
+
+    // background: linear-gradient(to right,
+    //     color-mix(in srgb, var(--color-sp1) 40%, var(--color-bg1)) 0%,
+    //     color-mix(in srgb, var(--color-sp1) 30%, var(--color-bg1)) 100%,
+    //   );
+
+    background: linear-gradient(to right,
+            color-mix(in srgb, var(--color-sp2) 50%, var(--color-bg1)) 0%,
+            color-mix(in srgb, var(--color-sp2) 70%, var(--color-bg1)) 100%,
+        );
+    color: var(--color-bg3)
+}
+
+.description {
+    font-size: 85%;
+    text-align: center;
+    font-weight: lighter;
+}
+
+.arrowDown {
+    height: 0px;
+    width: 0px;
+    border: none;
+    border-top: 16px solid rgba(255, 255, 255, 0.4);
+    border-left: 16px solid rgba(0, 0, 0, 0);
+    border-right: 16px solid rgba(0, 0, 0, 0);
+}
+
+.sectionDivider {
+    width: calc(100% - 30px);
+    border-bottom: 2px solid var(--color-fg);
+    margin: 50px 15px 20px 15px;
+}
+
+.filterStepsGrouperIndication {
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    height: calc(100% + 20px);
+    width: 2px;
+    background-color: color-mix(in srgb, var(--color-sp1) 50%, var(--color-bg1));
+    ;
+    display: none;
+}
+
+
+.filterEditButton {
+    box-sizing: border-box;
+    width: 24px;
+    height: 30px;
+    border-bottom-right-radius: 30px;
+    border-top-right-radius: 30px;
+    padding-left: 5px;
+    text-align: left;
+    line-height: 30px;
+    font-size: 12px;
+    background-color: color-mix(in srgb, var(--color-sp1) 50%, var(--color-bg1));
+    cursor: pointer;
+    display: none;
+
+    &:hover {
+        background-color: color-mix(in srgb, var(--color-sp1) 80%, var(--color-bg1));
+
+    }
+}
+
+.tableWrapper:hover {
+    .filterEditButton {
+        display: block;
+    }
+
+    .filterStepsGrouperIndication {
+        display: block;
+    }
+}

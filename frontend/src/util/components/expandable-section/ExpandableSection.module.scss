@@ -1,0 +1,47 @@
+.wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.expanderSection {
+    position: absolute;
+    text-align: center;
+    cursor: pointer;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+}
+
+.collapserSection {
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    height: 40px;
+}
+
+.switchButton {
+    position: absolute;
+    background-color: transparent;
+    color: white;
+    font-size: 22px;
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    line-height: 32px;
+}
+
+.expanderSection:hover {
+    .switchButton {
+        background-color: var(--color-sp1);
+    }
+}
+
+.collapserSection:hover {
+    .switchButton {
+        background-color: var(--color-sp1);
+    }
+}

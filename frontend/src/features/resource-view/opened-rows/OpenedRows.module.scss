@@ -1,0 +1,164 @@
+.wrapperCollapsed,
+.wrapperExpanded {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: var(--sidebar-total-width);
+    height: 100vh;
+    background: linear-gradient(to right,
+            color-mix(in srgb, var(--color-sp1) 55%, var(--color-bg3)),
+            color-mix(in srgb, var(--color-sp1) 45%, var(--color-bg3)));
+
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    transition: left 0.2s;
+
+    box-shadow: 0 0 25px color-mix(in srgb, var(--color-bg3) 50%, transparent);
+
+}
+
+
+
+.wrapperCollapsed {
+    left: calc(25px - var(--sidebar-total-width));
+
+    &:hover {
+        left: calc(80px - var(--sidebar-total-width));
+    }
+}
+
+.expandClicker {
+    position: absolute;
+    top: 40px;
+    right: 0;
+    width: 40px;
+    height: calc(100% - 40px);
+    cursor: pointer;
+}
+
+.buttonBar {
+    width: 100%;
+    height: 40px;
+    position: relative;
+    background-color: color-mix(in srgb, var(--color-fg) 10%, transparent);
+
+    button {
+        box-sizing: border-box;
+        position: absolute;
+        top: 7px;
+        margin: 0;
+        ;
+        padding: 10px;
+        top: 0;
+        right: 0;
+        width: 40px;
+        height: 40px;
+        background-color: transparent;
+        font-size: 22px;
+        border: none;
+        outline: none;
+        background: transparent;
+        cursor: pointer;
+
+        &:hover {
+            background-color: color-mix(in srgb, var(--color-fg) 20%, transparent);
+        }
+    }
+}
+
+
+.content {
+    width: 100%;
+    height: calc(100% - 40px);
+    box-sizing: border-box;
+    padding: 15px;
+    overflow-y: auto;
+    //overflow-x: hidden;
+}
+
+.rowCloseButton {
+    box-sizing: border-box;
+    position: absolute;
+    top: 7px;
+    padding: 0;
+    top: 22px;
+    right: -5px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    background: transparent;
+    background-color: transparent;
+    font-size: 14px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    opacity: 0.5;
+
+    &:hover {
+        opacity: 1;
+        background-color: color-mix(in srgb, var(--color-fg) 20%, transparent);
+    }
+
+}
+
+.rowTitle {
+    display: inline-block;
+    font-size: 140%;
+    padding-top: 16px;
+    padding-bottom: 3px;
+    margin-bottom: 10px;
+    border-bottom: 3px solid var(--color-sp1);
+}
+
+.col {
+    white-space: nowrap;
+    font-size: 90%;
+    ;
+}
+
+.colName {
+    width: 50%;
+    box-sizing: border-box;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: right;
+    padding-right: 8px;
+    color: color-mix(in srgb, var(--color-fg) 50%, var(--color-sp1));
+}
+
+.colContent {
+    width: 50%;
+    box-sizing: border-box;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.group {
+    padding-top: 10px;
+    padding-bottom: 5px;
+    color: color-mix(in srgb, var(--color-fg) 50%, var(--color-sp1));
+    font-weight: bold;
+    font-style: italic;
+}
+
+.wrapperCollapsed {
+    .content {
+        overflow-y: hidden;
+        ;
+    }
+}
+
+.actionButton {
+    // background-color: red !important;
+    padding: 15px !important;
+
+        background-color: color-mix(in srgb, var(--color-fg) 50%, var(--color-sp1)) !important;
+        color: color-mix(in srgb, var(--color-bg1) 75%, var(--color-sp1)) !important;
+        font-weight: bold !important;
+        font-size: 110% !important;
+        border-radius: 5px !important;
+
+}

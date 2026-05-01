@@ -1,0 +1,86 @@
+.wrapper,
+.wrapperEditing {
+    box-sizing: border-box;
+}
+
+.wrapperEditing {
+    box-sizing: border-box;
+    border: 1px dashed var(--color-sp3);
+    padding: 25px;
+    border-radius: 5px;
+    min-height: 100px;
+
+
+    box-shadow: 0 0 40px color-mix(in srgb, var(--color-sp3) 20%, transparent) inset;
+}
+
+
+// The combination of next 2 statements makes sure it only highlights when not hovering over any child element
+
+.wrapperEditing:hover {
+    box-shadow: 0 0 40px color-mix(in srgb, var(--color-sp3) 100%, transparent) inset;
+}
+
+.wrapperEditing:hover:has(.wrapperEditing:hover) {
+    box-shadow: 0 0 40px color-mix(in srgb, var(--color-sp3) 20%, transparent) inset;
+}
+
+.editButton {
+    position: absolute;
+    box-sizing: border-box;
+    //top: -11px;
+    width: 22px;
+    height: 22px;
+    border-radius: 11px;
+    color: var(--color-bg3);
+    background-color: var(--color-sp3);
+    font-size: 12px;
+    cursor: pointer;
+    line-height: 22px;
+    text-align: center;
+    transition: transform 0.2s;
+
+    &:hover {
+        background-color: var(--color-fg);
+        transform: scale(1.1);
+    }
+}
+
+.moveButton {
+    position: absolute;
+    box-sizing: border-box;
+    //top: -11px;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    color: var(--color-bg3);
+    background-color: color-mix(in srgb, var(--color-sp3) 25%, var(--color-bg1));
+    font-size: 12px;
+    cursor: pointer;
+    line-height: 22px;
+    text-align: center;
+    //    z-index: 1;
+    transition: transform 0.2s;
+
+    &:hover {
+        background-color: var(--color-fg);
+        transform: scale(1.1);
+    }
+
+}
+
+.editLabel {
+    position: absolute;
+    box-sizing: border-box;
+    padding: 0 8px;
+    top: -10px;
+    left: 10px;
+    height: 20px;
+    border-radius: 10px;
+    color: var(--color-sp3);
+    border: 1px solid var(--color-sp3);
+    background-color: color-mix(in srgb, var(--color-sp3) 5%, var(--color-bg3));
+    font-size: 11px;
+    line-height: 18px;
+
+}

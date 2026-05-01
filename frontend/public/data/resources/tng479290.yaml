@@ -1,0 +1,8 @@
+id: tng479290
+name: "TNG479290"
+description: "An example galaxy from the Milky Way and Andromeda analogues from the TNG50 simulation **(subsampled)**"
+dataSourceType: HDF5
+creationTimeStamp: 2024-01-02
+dataFile: TNG_479290_subsampled.hdf5
+conceptId: tng_galaxy
+thumbnail: 'tng479290.jpg'

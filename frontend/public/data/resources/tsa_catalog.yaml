@@ -1,0 +1,8 @@
+id: tsa_catalog
+name: "TSA Catalog"
+description: "The TNG SKIRT Atlas Catalog version 1"
+dataSourceType: TSV
+creationTimeStamp: 2023-01-01
+dataFile: baes24_tng50_skirt_atlas.tsv
+conceptId: tsa_catalog
+thumbnail: 'tsa_catalog.jpg'

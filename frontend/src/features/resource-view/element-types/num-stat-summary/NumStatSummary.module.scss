@@ -1,0 +1,35 @@
+.wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+
+.title {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 100%;
+    height: 40px;
+    font-size: 18px;
+    padding: 10px 0 0 15px;
+}
+
+
+.contentWrapper {
+    box-sizing: border-box;
+    width: 100%;
+    height: calc(100% - 40px);
+    overflow-y: hidden;
+    overflow-x: hidden;
+    padding: 10px 15px 0 15px;
+}
+
+.tag {
+    opacity: 0.6;
+    padding: 5px 0 5px 0;
+}
+
+.value {
+    text-align: center;
+    font-weight: bold;
+    padding-bottom: 10px;
+}

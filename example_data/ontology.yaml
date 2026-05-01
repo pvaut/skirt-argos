@@ -1,0 +1,721 @@
+
+
+
+concepts:
+
+# - id: root
+#   name: Root
+#   name_plural: Roots
+#   description: The root of the data set
+
+# - id: project
+#   name: Project
+#   name_plural: Projects
+#   description: A project
+
+  # ==========================================================================
+
+- id: survey
+  name: Survey table
+  name_plural: Survey tables
+  description: A galaxy survey
+
+
+- id: galaxy
+  name: Galaxy
+  name_plural: Galaxies
+  description: Galaxy
+  label_property: objname
+  properties:
+  - id: pgc
+    type: int
+    name: PGC number
+  - id: objname
+    type: string
+    name: Principal name
+  - id: al2000
+    type: double
+    unit: hour
+    name: RA 2000
+    decimal_digits: 5
+  - id: de2000
+    type: double
+    unit: degrees
+    name: DEC 2000 
+    decimal_digits: 3
+  - id: type
+    type: categorical
+    name: Morphological type
+  - id: logd25
+    type: float
+    unit: log(0.1 arcmin)
+    name: log of apparent diameter
+    decimal_digits: 3
+  - id: e_logd25
+    type: float
+    unit: log(0.1 arcmin)
+    name: Actual error on logd25
+    decimal_digits: 3
+  - id: logr25
+    type: float
+    unit: log
+    name: log of axis ratio
+    decimal_digits: 3
+  - id: e_logr25
+    type: float
+    unit: log
+    name: Actual error on logr25
+    decimal_digits: 3
+  - id: brief
+    type: float
+    unit: mag/arcsec2
+    name: Mean effective surface brightness
+    decimal_digits: 3
+  - id: bt
+    type: float
+    unit: mag
+    name: Total B-magnitude
+    decimal_digits: 3
+  - id: e_bt
+    type: float
+    unit: mag
+    name: Error on Total B-magnitude
+    decimal_digits: 3
+  - id: it
+    type: float
+    unit: mag
+    name: Total I-magnitude
+    decimal_digits: 3
+  - id: e_it
+    type: float
+    unit: mag
+    name: Error on Total I-magnitude
+    decimal_digits: 3
+  - id: vdis
+    type: float
+    unit: km/s
+    name: Central velocity dispersion
+    decimal_digits: 5
+  - id: e_vdis
+    type: float
+    unit: km/s
+    name: Error on Central velocity dispersion
+    decimal_digits: 5
+
+
+# ==========================================================================
+
+
+- id: example_table
+  name: Example table
+  description: Example table, used for development purposes
+
+- id: example_table_element
+  name: Example table element
+  description: A single row in an example table
+  label_property: label
+  properties:
+  - id: x
+    type: double
+    name: X coordinate
+  - id: y
+    type: double
+    name: Y coordinate
+  - id: z
+    type: double
+    name: Z coordinate
+  - id: label
+    type: string
+    name: Point label
+
+
+
+# ==========================================================================
+
+- id: tng_snapshot
+  name: TNG Snapshot
+  name_plural: TNG Snapshots
+  description: A TNG snapshot
+
+- id: subhalo
+  name: Subhalo
+  name_plural: Subhalos
+  description: A single subhalo from a TNG snapshot
+  properties:
+
+  - id: SubhaloMass
+    type: float
+    name: Mass
+    decimal_digits: 4
+
+  - id: Position
+    type: vector3d
+    name: Position
+
+  - id: SubhaloPos_I_0
+    type: float
+    name: X position
+    parent: Position
+    decimal_digits: 2
+
+  - id: SubhaloPos_I_1
+    type: float
+    name: Y position
+    parent: Position
+    decimal_digits: 2
+
+  - id: SubhaloPos_I_2
+    type: float
+    name: Z position
+    parent: Position
+    decimal_digits: 2
+
+  - id: Velocity
+    type: vector3d
+    name: Velocity
+
+  - id: SubhaloVel_I_0
+    type: float
+    name: X velocity
+    parent: Velocity
+    decimal_digits: 2
+
+  - id: SubhaloVel_I_1
+    type: float
+    name: Y velocity
+    parent: Velocity
+    decimal_digits: 2
+
+  - id: SubhaloVel_I_2
+    type: float
+    name: Z velocity
+    parent: Velocity
+    decimal_digits: 2
+
+
+  - id: SubhaloVelDisp
+    type: float
+    name: Velocity dispsersion
+    decimal_digits: 2
+
+  - id: SubhaloLen
+    type: float
+    name: Length
+    decimal_digits: 2
+
+
+
+# ==========================================================================
+
+# - id: tng_cutout_parttype1
+#   name: TNG Cutout particle type 1
+#   name_plural: TNG Cutouts particle type 1
+#   description: A TNG cutout
+
+
+- id: tng_parttype0
+  name: TNG particle T0
+  name_plural: TNG particles T0
+  description: Particle type 0 of TNG
+  property_groups:
+  - id: kinematics
+    name: Kinematics
+  - id: physics
+    name: Physics
+  - id: chemistry
+    name: Chemistry
+  properties:
+
+  - id: Density
+    type: float
+    name: Density
+    parent: physics
+    decimal_digits: 2
+
+  - id: Masses
+    type: float
+    name: Masses
+    parent: physics
+    decimal_digits: 8
+
+  - id: Position
+    type: vector3d
+    parent: kinematics
+    name: Position
+
+  - id: Coordinates_I_0
+    type: float
+    name: X position
+    parent: Position
+    decimal_digits: 2
+
+  - id: Coordinates_I_1
+    type: float
+    name: Y position
+    parent: Position
+    decimal_digits: 2
+
+  - id: Coordinates_I_2
+    type: float
+    name: Z position
+    parent: Position
+    decimal_digits: 2
+
+  - id: Velocity
+    type: vector3d
+    parent: kinematics
+    name: Velocity
+
+  - id: Velocities_I_0
+    type: float
+    name: X velocity
+    parent: Velocity
+    decimal_digits: 2
+
+  - id: Velocities_I_1
+    type: float
+    name: Y velocity
+    parent: Velocity
+    decimal_digits: 2
+
+  - id: Velocities_I_2
+    type: float
+    name: Z velocity
+    parent: Velocity
+    decimal_digits: 2
+
+  - id: Machnumber
+    type: float
+    parent: kinematics
+    name: Mach number
+
+
+  - id: GFM_AGNRadiation
+    type: float
+    parent: physics
+    name: AGN Radiation
+
+
+  - id: GFM_Metallicity
+    type: float
+    name: GFM Metallicity
+    parent: chemistry
+    decimal_digits: 2
+
+  - id: GFM_Metals_I_0
+    type: float
+    name: Metals - 0
+    parent: chemistry
+    decimal_digits: 4
+
+  - id: GFM_Metals_I_1
+    type: float
+    name: Metals - 1
+    parent: chemistry
+    decimal_digits: 4
+
+  - id: GFM_Metals_I_2
+    type: float
+    name: Metals - 2
+    parent: chemistry
+    decimal_digits: 4
+
+  - id: GFM_Metals_I_3
+    type: float
+    name: Metals - 3
+    parent: chemistry
+    decimal_digits: 4
+
+  - id: GFM_Metals_I_4
+    type: float
+    name: Metals - 4
+    parent: chemistry
+    decimal_digits: 4
+
+  - id: GFM_Metals_I_5
+    type: float
+    name: Metals - 5
+    parent: chemistry
+    decimal_digits: 4
+
+  - id: GFM_Metals_I_6
+    type: float
+    name: Metals - 6
+    parent: chemistry
+    decimal_digits: 4
+
+  - id: GFM_Metals_I_7
+    type: float
+    name: Metals - 7
+    parent: chemistry
+    decimal_digits: 4
+
+  - id: GFM_Metals_I_8
+    type: float
+    name: Metals - 8
+    parent: chemistry
+    decimal_digits: 4
+
+  - id: GFM_Metals_I_9
+    type: float
+    name: Metals - 9
+    parent: chemistry
+    decimal_digits: 4
+
+  - id: ElectronAbundance
+    type: float
+    name: Electron Abundance
+    parent: physics
+    decimal_digits: 2
+
+  - id: EnergyDissipation
+    type: float
+    name: Energy Dissipation
+    parent: physics
+    decimal_digits: 2
+    
+  - id: GFM_CoolingRate
+    type: float
+    name: GFM Cooling Rate
+    parent: physics
+    decimal_digits: 2    
+
+  - id: NeutralHydrogenAbundance
+    type: float
+    name: Neutral Hydrogen Abundance
+    parent: physics
+    decimal_digits: 2
+
+  - id: StarFormationRate
+    type: float
+    name: Star formation rate
+    parent: physics
+    decimal_digits: 2
+
+  - id: MagneticFieldDivergence
+    type: float
+    name: Magnetic Field Divergence
+    parent: physics
+    decimal_digits: 2
+
+
+
+- id: tng_parttype1
+  name: TNG particle T1
+  name_plural: TNG particles T1
+  description: Particle type 1 of TNG
+  properties:
+
+  - id: Position
+    type: vector3d
+    name: Position
+
+  - id: Coordinates_I_0
+    type: float
+    name: X position
+    parent: Position
+    decimal_digits: 2
+
+  - id: Coordinates_I_1
+    type: float
+    name: Y position
+    parent: Position
+    decimal_digits: 2
+
+  - id: Coordinates_I_2
+    type: float
+    name: Z position
+    parent: Position
+    decimal_digits: 2
+
+  - id: Velocity
+    type: vector3d
+    name: Velocity
+
+  - id: Velocities_I_0
+    type: float
+    name: X velocity
+    parent: Velocity
+    decimal_digits: 2
+
+  - id: Velocities_I_1
+    type: float
+    name: Y velocity
+    parent: Velocity
+    decimal_digits: 2
+
+  - id: Velocities_I_2
+    type: float
+    name: Z velocity
+    parent: Velocity
+    decimal_digits: 2
+
+  - id: SubfindVelDisp
+    type: float
+    name: Velocity dispersion
+    decimal_digits: 2
+
+
+- id: tng_parttype4
+  name: TNG particle T4
+  name_plural: TNG particles T4
+  description: Particle type 4 of TNG
+  property_groups:
+  - id: kinematics
+    name: Kinematics
+  - id: physics
+    name: Physics
+  - id: photometrics
+    name: Photometrics
+  - id: chemistry
+    name: Chemistry
+  properties:
+
+  - id: Masses
+    type: float
+    name: Masses
+    parent: physics
+    decimal_digits: 2
+
+  - id: Position
+    type: vector3d
+    name: Position
+    parent: kinematics
+
+  - id: Coordinates_I_0
+    type: float
+    name: X position
+    parent: Position
+    decimal_digits: 2
+
+  - id: Coordinates_I_1
+    type: float
+    name: Y position
+    parent: Position
+    decimal_digits: 2
+
+  - id: Coordinates_I_2
+    type: float
+    name: Z position
+    parent: Position
+    decimal_digits: 2
+
+  - id: Velocity
+    type: vector3d
+    name: Velocity
+    parent: kinematics
+
+  - id: Velocities_I_0
+    type: float
+    name: X velocity
+    parent: Velocity
+    decimal_digits: 2
+
+  - id: Velocities_I_1
+    type: float
+    name: Y velocity
+    parent: Velocity
+    decimal_digits: 2
+
+  - id: Velocities_I_2
+    type: float
+    name: Z velocity
+    parent: Velocity
+    decimal_digits: 2
+
+  - id: GFM_Metallicity
+    type: float
+    name: GFM Metallicity
+    parent: chemistry
+    decimal_digits: 2
+
+  - id: GFM_Metals_I_0
+    type: float
+    name: Metals-0
+    parent: chemistry
+    decimal_digits: 6
+
+  - id: GFM_Metals_I_1
+    type: float
+    name: Metals-1
+    parent: chemistry
+    decimal_digits: 6
+
+  - id: GFM_Metals_I_2
+    type: float
+    name: Metals-2
+    parent: chemistry
+    decimal_digits: 6
+
+  - id: GFM_Metals_I_3
+    type: float
+    name: Metals-3
+    parent: chemistry
+    decimal_digits: 6
+
+  - id: GFM_Metals_I_4
+    type: float
+    name: Metals-4
+    parent: chemistry
+    decimal_digits: 6
+
+  - id: GFM_Metals_I_5
+    type: float
+    name: Metals-5
+    parent: chemistry
+    decimal_digits: 6
+
+  - id: GFM_Metals_I_6
+    type: float
+    name: Metals-6
+    parent: chemistry
+    decimal_digits: 6
+
+  - id: GFM_Metals_I_7
+    type: float
+    name: Metals-7
+    parent: chemistry
+    decimal_digits: 6
+
+  - id: GFM_Metals_I_8
+    type: float
+    name: Metals-8
+    parent: chemistry
+    decimal_digits: 6
+
+  - id: GFM_Metals_I_9
+    type: float
+    name: Metals-9
+    parent: chemistry
+    decimal_digits: 6
+
+  - id: GFM_StellarPhotometrics_I_0
+    type: float
+    name: Photometrics-0
+    parent: photometrics
+    decimal_digits: 2
+
+  - id: GFM_StellarPhotometrics_I_1
+    type: float
+    name: Photometrics-1
+    parent: photometrics
+    decimal_digits: 2
+
+  - id: GFM_StellarPhotometrics_I_2
+    type: float
+    name: Photometrics-2
+    parent: photometrics
+    decimal_digits: 2
+
+  - id: Potential
+    type: float
+    name: Potential
+    parent: physics
+    decimal_digits: 2
+
+  - id: StellarHsml
+    type: float
+    name: Stellar Hsml
+    parent: physics
+    decimal_digits: 2
+
+  - id: GFM_StellarFormationTime
+    type: float
+    name: Stellar formation time
+    parent: physics
+    decimal_digits: 2
+
+  - id: SubfindVelDisp
+    type: float
+    name: Velocity dispersion
+    parent: kinematics
+    decimal_digits: 2
+
+
+
+# ==========================================================================
+
+
+- id: lara_analysis_table_element
+  name: Analysis table element
+  description: ""
+  # label_property: label
+  properties:
+
+  - id: Autocorrelation function for corr(alpha_powerU-alphas_radio)
+    type: double
+    name: Autocorrelation function for corr(alpha_powerU-alphas_radio)
+
+
+  - id: Autocorrelation function for corr(alpha_powerU-fFF_radio)
+    type: double
+    name: Autocorrelation function for corr(alpha_powerU-fFF_radio)
+
+
+  - id: Autocorrelation function for corr(alpha_powerU-fionPAH_powerU)
+    type: double
+    name: Autocorrelation function for corr(alpha_powerU-fionPAH_powerU)
+
+  - id: Autocorrelation function for corr(alpha_powerU-lnL0_radio)
+    type: double
+    name: Autocorrelation function for corr(alpha_powerU-lnL0_radio)
+
+  - id:  Autocorrelation function for corr(fFF_radio-lnL_starBB)
+    type: double
+    name: Autocorrelation function for corr(fFF_radio-lnL_starBB)
+
+  - id:  Autocorrelation function for corr(fionPAH_powerU-alphas_radio)
+    type: double
+    name: Autocorrelation function for corr(fionPAH_powerU-alphas_radio)
+
+  - id:  Autocorrelation function for corr(lnDU_powerU-lnL0_radio)
+    type: double
+    name: Autocorrelation function for corr(lnDU_powerU-lnL0_radio)
+
+  - id:  Autocorrelation function for corr(lnq_PAH_powerU-alphas_radio)
+    type: double
+    name: Autocorrelation function for corr(lnq_PAH_powerU-alphas_radio)
+
+
+# ==========================================================================
+
+
+
+relation_types: []
+
+# - id: belongs_to_root
+#   concept_from: project
+#   concept_to: root
+#   arity: many_to_one
+#   name_forward: "Belongs to"
+#   name_reverse: "Has project"
+
+# - id: survey_belongs_to_project
+#   concept_from: survey
+#   concept_to: project
+#   arity: many_to_one
+#   name_forward: "Belongs to project"
+#   name_reverse: "Has survey"  
+
+# - id: example_table_belongs_to_project
+#   concept_from: example_table
+#   concept_to: project
+#   arity: many_to_one
+#   name_forward: "Belongs to project"
+#   name_reverse: "Has example table"    
+
+
+# - id: snapshot_belongs_to_root
+#   concept_from: tng_snapshot
+#   concept_to: root
+#   arity: many_to_one
+#   name_forward: "Belongs to root"
+#   name_reverse: "Has snapshot"    
+
+
+# - id: tng_cutout_parttype1_belongs_to_root
+#   concept_from: tng_cutout_parttype1
+#   concept_to: root
+#   arity: many_to_one
+#   name_forward: "Belongs to root"
+#   name_reverse: "Has snapshot"      

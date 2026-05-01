@@ -1,0 +1,6 @@
+name: A project dashboard
+rootElement:
+  elements: []
+  type: verticalGroup
+targetConcept: project
+templateId: project_dashboard.yaml

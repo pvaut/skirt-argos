@@ -1,0 +1,628 @@
+conceptDefinition:
+  isLocal: true
+  isTable: false
+  id: static_tng_cutout
+  name: TNG Subhalo cutout
+  namePlural: ''
+  description: >-
+    [Illustris TNG](https://www.tng-project.org/) is a series of large
+    cosmological magnetohydrodynamical simulations of galaxy formation.
+  tableConcepts:
+    - path: /PartType1
+      nameSingle: Part Type1
+      namePlural: Dark Matter Particles
+      description: ''
+      propertyGroups: []
+      properties:
+        - path: /PartType1/Coordinates
+          name: Coordinates
+          description: ''
+          transformationExpression: x
+          groupId: null
+          dataType: vector3d
+          children:
+            - index: 0
+              name: Coordinates - X
+              dataType: double
+            - index: 1
+              name: Coordinates - Y
+              dataType: double
+            - index: 2
+              name: Coordinates - Z
+              dataType: double
+          totalChildCount: 3
+        - path: /PartType1/Velocities
+          name: Velocities
+          description: ''
+          transformationExpression: x
+          groupId: null
+          dataType: vector3d
+          children:
+            - index: 0
+              name: Velocities - X
+              dataType: float
+            - index: 1
+              name: Velocities - Y
+              dataType: float
+            - index: 2
+              name: Velocities - Z
+              dataType: float
+          totalChildCount: 3
+      labelColumnPath: null
+    - path: /PartType0
+      nameSingle: Part Type0
+      namePlural: Gas Particles
+      description: ''
+      propertyGroups: []
+      properties:
+        - path: /PartType0/Coordinates
+          name: Coordinates
+          description: ''
+          transformationExpression: x
+          groupId: null
+          dataType: vector3d
+          children:
+            - index: 0
+              name: Coordinates - X
+              dataType: double
+            - index: 1
+              name: Coordinates - Y
+              dataType: double
+            - index: 2
+              name: Coordinates - Z
+              dataType: double
+          totalChildCount: 3
+        - path: /PartType0/Velocities
+          name: Velocities
+          description: ''
+          transformationExpression: x
+          groupId: null
+          dataType: vector3d
+          children:
+            - index: 0
+              name: Velocities - X
+              dataType: float
+            - index: 1
+              name: Velocities - Y
+              dataType: float
+            - index: 2
+              name: Velocities - Z
+              dataType: float
+          totalChildCount: 3
+        - path: /PartType0/ElectronAbundance
+          name: Electron Abundance
+          description: ''
+          transformationExpression: x
+          groupId: null
+          dataType: float
+          children: []
+        - path: /PartType0/EnergyDissipation
+          name: Energy Dissipation
+          description: ''
+          transformationExpression: x
+          groupId: null
+          dataType: float
+          children: []
+        - path: /PartType0/GFM_CoolingRate
+          name: GFM Cooling Rate
+          description: ''
+          transformationExpression: x
+          groupId: null
+          dataType: float
+          children: []
+        - path: /PartType0/GFM_Metallicity
+          name: GFM Metallicity
+          description: ''
+          transformationExpression: x
+          groupId: null
+          dataType: float
+          children: []
+        - path: /PartType0/Masses
+          name: Masses
+          description: ''
+          transformationExpression: x
+          groupId: null
+          dataType: float
+          children: []
+        - path: /PartType0/Potential
+          name: Potential
+          description: ''
+          transformationExpression: x
+          groupId: null
+          dataType: float
+          children: []
+        - path: /PartType0/StarFormationRate
+          name: Star Formation Rate
+          description: ''
+          transformationExpression: x
+          groupId: null
+          dataType: float
+          children: []
+        - path: /PartType0/SubfindVelDisp
+          name: Subfind Vel Disp
+          description: ''
+          transformationExpression: x
+          groupId: null
+          dataType: float
+          children: []
+      labelColumnPath: null
+    - path: /PartType4
+      nameSingle: Part Type4
+      namePlural: Stellar Particles
+      description: ''
+      propertyGroups: []
+      properties:
+        - path: /PartType4/Coordinates
+          name: Coordinates
+          description: ''
+          transformationExpression: x
+          groupId: null
+          dataType: vector3d
+          children:
+            - index: 0
+              name: Coordinates - X
+              dataType: double
+            - index: 1
+              name: Coordinates - Y
+              dataType: double
+            - index: 2
+              name: Coordinates - Z
+              dataType: double
+          totalChildCount: 3
+        - path: /PartType4/Velocities
+          name: Velocities
+          description: ''
+          transformationExpression: x
+          groupId: null
+          dataType: vector3d
+          children:
+            - index: 0
+              name: Velocities - X
+              dataType: float
+            - index: 1
+              name: Velocities - Y
+              dataType: float
+            - index: 2
+              name: Velocities - Z
+              dataType: float
+          totalChildCount: 3
+        - path: /PartType4/GFM_InitialMass
+          name: GFM Initial Mass
+          description: ''
+          transformationExpression: x
+          groupId: null
+          dataType: float
+          children: []
+        - path: /PartType4/GFM_Metallicity
+          name: GFM Metallicity
+          description: ''
+          transformationExpression: x
+          groupId: null
+          dataType: float
+          children: []
+        - path: /PartType4/Potential
+          name: Potential
+          description: ''
+          transformationExpression: x
+          groupId: null
+          dataType: float
+          children: []
+        - path: /PartType4/GFM_StellarFormationTime
+          name: GFM Stellar Formation Time
+          description: ''
+          transformationExpression: x
+          groupId: null
+          dataType: float
+          children: []
+        - path: /PartType4/Masses
+          name: Masses
+          description: ''
+          transformationExpression: x
+          groupId: null
+          dataType: float
+          children: []
+        - path: /PartType4/SubfindVelDisp
+          name: Subfind Vel Disp
+          description: ''
+          transformationExpression: x
+          groupId: null
+          dataType: float
+          children: []
+        - path: /PartType4/SubfindDensity
+          name: Subfind Density
+          description: ''
+          transformationExpression: x
+          groupId: null
+          dataType: float
+          children: []
+      labelColumnPath: null
+  globalAttributeDefs:
+    - identifier: sumulationName
+      expression: attrib_Header_SimulationName
+    - identifier: snapshotNumber
+      expression: attrib_Header_SnapshotNumber
+  serverVersion: 3
+dashboardTemplate:
+  targetConcept: static_tng_cutout
+  templateId: autoTemplate_concept_G9b11d70f_c479_423d_bcd4_e911a7654a12.yaml
+  name: Template for TNG Subhalo cutout
+  rootElement:
+    elements:
+      - type: verticalGroup
+        elements:
+          - type: staticText
+            content: Static text content
+            size:
+              width: 100%
+            settings:
+              content: |-
+                Simulation: **{sumulationName}**
+
+                Snapshot: **{snapshotNumber}**
+        size:
+          width: 100%
+        settings: {}
+      - type: tabGroup
+        elements:
+          - type: verticalGroup
+            elements:
+              - type: horizontalGroup
+                elements:
+                  - type: canvasVolume
+                    size:
+                      width: 50%
+                      height: 600px
+                    layers:
+                      - type: volumePointsVelocity
+                        encodings:
+                          position: Coordinates
+                          velocity: Velocities
+                        table: $PartType0
+                        settings:
+                          pointSizeFactor: 2
+                    settings:
+                      syncGroupVolume: vol
+                      title: Kinematics
+                  - type: canvasVolume
+                    size:
+                      width: 50%
+                      height: 600px
+                    layers:
+                      - type: volumePoints
+                        encodings:
+                          position: Coordinates
+                          color: GFM_Metallicity
+                        table: $PartType0
+                        settings:
+                          pointSizeFactor: 2
+                          colorGammaFactor: 0.15
+                    settings:
+                      animate: false
+                      syncGroupVolume: vol
+                      title: Metallicity
+                size:
+                  width: 100%
+                settings: {}
+              - type: horizontalGroup
+                elements:
+                  - type: canvasVolume
+                    size:
+                      width: 50%
+                      height: 600px
+                    layers:
+                      - type: volumePoints
+                        encodings:
+                          position: Coordinates
+                          color: StarFormationRate
+                        table: $PartType0
+                        settings:
+                          colorGammaFactor: 0.06
+                          pointSizeFactor: 2
+                          colorRamp: magma
+                    settings:
+                      animate: false
+                      syncGroupVolume: vol
+                      title: Star Formation Rate
+                  - type: canvasVolume
+                    size:
+                      width: 50%
+                      height: 600px
+                    layers:
+                      - type: volumePoints
+                        encodings:
+                          position: Coordinates
+                          color: ElectronAbundance
+                        table: $PartType0
+                        settings:
+                          pointSizeFactor: 2
+                    settings:
+                      animate: false
+                      syncGroupVolume: vol
+                      title: Electron Abundance
+                size:
+                  width: 100%
+                settings: {}
+              - type: verticalGroup
+                elements:
+                  - type: horizontalGroup
+                    elements:
+                      - type: canvasVolume
+                        size:
+                          height: 600px
+                          width: 100%
+                        layers:
+                          - type: volumePoints
+                            encodings:
+                              position: Velocities
+                              color: GFM_Metallicity
+                            table: $PartType0
+                            settings:
+                              pointSizeFactor: 2.6
+                              colorGammaFactor: 0.15
+                        settings:
+                          syncGroupVolume: veloc
+                          title: Metallicity
+                      - type: canvasVolume
+                        size:
+                          height: 600px
+                          width: 100%
+                        layers:
+                          - type: volumePoints
+                            encodings:
+                              position: Velocities
+                              color: ElectronAbundance
+                            table: $PartType0
+                            settings:
+                              pointSizeFactor: 2.6
+                        settings:
+                          animate: false
+                          syncGroupVolume: veloc
+                          title: Electron Abundance
+                    size:
+                      width: 100%
+                    settings: {}
+                size:
+                  width: 100%
+                settings:
+                  title: Velocity Distribution
+              - type: verticalGroup
+                elements:
+                  - type: horizontalGroup
+                    elements:
+                      - type: canvas2D
+                        size:
+                          height: 600px
+                          width: 100%
+                        layers:
+                          - type: points
+                            encodings:
+                              x: GFM_Metallicity
+                              'y': StarFormationRate
+                              color: ElectronAbundance
+                            table: $PartType0
+                            settings:
+                              colorGammaFactor: 0.5
+                              pointSizeFactor: 2.6
+                      - type: canvas2D
+                        size:
+                          height: 600px
+                          width: 100%
+                        layers:
+                          - type: points
+                            encodings:
+                              x: Potential
+                              'y': SubfindVelDisp
+                              color: ElectronAbundance
+                            table: $PartType0
+                            settings:
+                              pointSizeFactor: 2.6
+                    size:
+                      width: 100%
+                    settings: {}
+                  - type: horizontalGroup
+                    elements:
+                      - type: canvas2D
+                        size:
+                          width: 100%
+                          height: 400px
+                        layers:
+                          - type: histogram
+                            encodings:
+                              values: ElectronAbundance
+                            table: $PartType0
+                        settings: {}
+                      - type: canvas2D
+                        size:
+                          width: 100%
+                          height: 400px
+                        layers:
+                          - type: histogram
+                            encodings:
+                              values: GFM_Metallicity
+                            table: $PartType0
+                        settings: {}
+                      - type: canvas2D
+                        size:
+                          width: 100%
+                          height: 400px
+                        layers:
+                          - type: histogram
+                            encodings:
+                              values: StarFormationRate
+                            table: $PartType0
+                            settings:
+                              yScaleType: log1pCount
+                        settings: {}
+                    size:
+                      width: 100%
+                    settings: {}
+                size:
+                  width: 100%
+                settings:
+                  title: Other
+            size:
+              width: 100%
+            settings:
+              title: Spatial Distribution
+          - type: verticalGroup
+            elements:
+              - type: horizontalGroup
+                elements:
+                  - type: canvasVolume
+                    size:
+                      height: 600px
+                      width: 100%
+                    layers:
+                      - type: volumePointsVelocity
+                        encodings:
+                          position: Coordinates
+                          velocity: Velocities
+                        table: $PartType4
+                        settings:
+                          pointSizeFactor: 2
+                    settings:
+                      syncGroupVolume: vol
+                      title: Kinematics
+                  - type: canvasVolume
+                    size:
+                      height: 600px
+                      width: 100%
+                    layers:
+                      - type: volumePoints
+                        encodings:
+                          position: Coordinates
+                          color: GFM_StellarFormationTime
+                        table: $PartType4
+                        settings:
+                          pointSizeFactor: 2
+                    settings:
+                      title: Stellar Formation Time
+                      animate: false
+                      syncGroupVolume: vol
+                size:
+                  width: 100%
+                settings: {}
+              - type: horizontalGroup
+                elements:
+                  - type: canvasVolume
+                    size:
+                      height: 600px
+                      width: 100%
+                    layers:
+                      - type: volumePoints
+                        encodings:
+                          position: Coordinates
+                          color: GFM_Metallicity
+                        table: $PartType4
+                        settings:
+                          pointSizeFactor: 2
+                          colorGammaFactor: 0.07
+                    settings:
+                      animate: false
+                      syncGroupVolume: vol
+                  - type: canvasVolume
+                    size:
+                      height: 600px
+                      width: 100%
+                    layers:
+                      - type: volumePoints
+                        encodings:
+                          position: Coordinates
+                          color: SubfindVelDisp
+                        table: $PartType4
+                        settings:
+                          pointSizeFactor: 2
+                    settings:
+                      animate: false
+                      syncGroupVolume: vol
+                size:
+                  width: 100%
+                settings: {}
+              - type: verticalGroup
+                elements:
+                  - type: canvas2D
+                    size:
+                      height: 600px
+                      width: 100%
+                    layers:
+                      - type: points
+                        encodings:
+                          x: GFM_StellarFormationTime
+                          'y': GFM_Metallicity
+                          color: Potential
+                        table: $PartType4
+                        settings:
+                          pointSizeFactor: 2
+                          colorGammaFactor: 0.22
+                size:
+                  width: 100%
+                settings:
+                  title: Other
+            size:
+              width: 100%
+            settings:
+              title: Spatial Distribution
+          - type: verticalGroup
+            elements:
+              - type: horizontalGroup
+                elements:
+                  - type: canvasVolume
+                    size:
+                      height: 600px
+                      width: 100%
+                    layers:
+                      - type: volumePointsVelocity
+                        encodings:
+                          position: Coordinates
+                          velocity: Velocities
+                        table: $PartType0
+                        settings:
+                          pointSizeFactor: 2
+                    settings:
+                      syncGroupVolume: vol
+                      title: Gas Component
+                  - type: canvasVolume
+                    size:
+                      height: 600px
+                      width: 100%
+                    layers:
+                      - type: volumePointsVelocity
+                        encodings:
+                          position: Coordinates
+                          velocity: Velocities
+                        table: $PartType4
+                        settings:
+                          pointSizeFactor: 2
+                    settings:
+                      syncGroupVolume: vol
+                      title: Stellar Component
+                size:
+                  width: 100%
+                settings: {}
+              - type: horizontalGroup
+                elements:
+                  - type: canvasVolume
+                    size:
+                      width: 50%
+                      height: 600px
+                    layers:
+                      - type: volumePointsVelocity
+                        encodings:
+                          position: Coordinates
+                          velocity: Velocities
+                        table: $PartType1
+                    settings:
+                      animate: false
+                      syncGroupVolume: vol
+                      title: Dark Matter Component
+                size:
+                  width: 100%
+                settings: {}
+            size:
+              width: 100%
+            settings: {}
+        size:
+          width: 100%
+        settings:
+          tabNames: Gas Component;Stellar Component;Overview
+    type: verticalGroup

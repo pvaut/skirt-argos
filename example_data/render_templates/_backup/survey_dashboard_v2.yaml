@@ -1,0 +1,269 @@
+name: A survey dashboard
+rootElement:
+  elements:
+  - elements:
+    - elements:
+      - elements:
+        - content: Static text content
+          settings:
+            content: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+              elit velit, vulputate quis ante sit amet, maximus vehicula risus. Vestibulum
+              ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
+              curae; Maecenas ac dui ut nisl maximus vulputate sit amet at odio. Etiam
+              faucibus rutrum ipsum, sit amet consequat mauris tincidunt vel. Aenean
+              fermentum rhoncus orci, sed lobortis elit tincidunt a. Aliquam non cursus
+              nunc, vel scelerisque justo. Praesent porttitor enim felis, fermentum
+              volutpat odio commodo id. Duis sodales, urna sit amet dictum commodo,
+              orci mi elementum turpis, eget eleifend erat leo nec orci. In dapibus,
+              urna sit amet condimentum dapibus, mauris velit dictum lectus, in vehicula
+              velit sapien et arcu.
+          size:
+            width: 100%
+          type: staticText
+        - elements:
+          - layers:
+            - encodings:
+                color: bt
+                x: al2000
+                y: de2000
+              type: points
+            size:
+              height: 600px
+              width: 100%
+            type: canvas2D
+          - encodings:
+              categories: type
+            settings: {}
+            size:
+              height: 600px
+              width: 300px
+            type: categoricalFacet
+          settings: {}
+          size:
+            width: 100%
+          type: horizontalGroup
+        - elements: []
+          encodings: {}
+          settings:
+            columns:
+            - id: pgc
+              width: 100
+            - id: objname
+              width: 220
+            - id: al2000
+              width: 100
+            - id: de2000
+              width: 100
+            - id: type
+              width: 80
+            - id: logd25
+              width: 150
+            - id: logr25
+              width: 170
+            - id: bt
+              width: 150
+            - id: it
+              width: 140
+            - id: brief
+              width: 140
+            - id: vdis
+              width: 140
+          size:
+            height: 600px
+            width: 100%
+          type: tableView
+        - elements:
+          - layers:
+            - encodings:
+                color: brief
+                x: bt
+                y: it
+              type: points
+            size:
+              height: 600px
+              width: 100%
+            type: canvas2D
+          - layers:
+            - encodings:
+                color: e_bt
+                x: e_logd25
+                y: e_logr25
+              type: points
+            size:
+              height: 600px
+              width: 100%
+            type: canvas2D
+          settings: {}
+          size:
+            width: 100%
+          type: horizontalGroup
+        settings:
+          title: Section 1
+        size:
+          width: 100%
+        type: verticalGroup
+      - elements:
+        - content: Static text content
+          settings:
+            content: Sed rhoncus blandit eros eget vehicula. Cras id ante eu nisi
+              euismod finibus. Fusce semper mauris id fringilla feugiat. Nullam vel
+              malesuada enim. Nullam fermentum nibh sed erat tempus tristique. Etiam
+              turpis nibh, porttitor non leo in, tempor commodo orci. Morbi orci felis,
+              eleifend non auctor eu, fringilla eget est. In lobortis felis leo, nec
+              tempor lacus lobortis fringilla. Orci varius natoque penatibus et magnis
+              dis parturient montes, nascetur ridiculus mus. Phasellus pellentesque
+              metus felis, sit amet luctus nisl ultrices et. Maecenas porttitor quis
+              nibh a malesuada.
+          size:
+            width: 100%
+          type: staticText
+        - elements:
+          - layers:
+            - encodings:
+                color: brief
+                x: bt
+                y: it
+              type: points
+            size:
+              height: 600px
+              width: 100%
+            type: canvas2D
+          - layers:
+            - encodings:
+                color: brief
+                x: logd25
+                y: logr25
+              type: points
+            size:
+              height: 600px
+              width: 100%
+            type: canvas2D
+          settings: {}
+          size:
+            width: 100%
+          type: horizontalGroup
+        settings:
+          title: Section 2
+        size:
+          width: 100%
+        type: verticalGroup
+      settings: {}
+      size:
+        width: 100%
+      type: verticalGroup
+    - elements:
+      - elements:
+        - layers:
+          - encodings:
+              color: bt
+              x: e_bt
+              y: e_it
+            type: points
+          size:
+            height: 600px
+            width: 100%
+          type: canvas2D
+        - layers:
+          - encodings:
+              color: bt
+              x: e_logd25
+              y: e_logr25
+            type: points
+          size:
+            height: 600px
+            width: 100%
+          type: canvas2D
+        settings: {}
+        size:
+          width: 100%
+        type: horizontalGroup
+      - content: Static text content
+        settings:
+          content: Aliquam tristique est non est lacinia rutrum. Etiam nisl massa,
+            convallis a maximus ac, tempus sed leo. Morbi a turpis et est ullamcorper
+            dapibus. Nam bibendum risus ac hendrerit pellentesque. Aenean ultrices
+            porttitor justo a ultricies. Sed dui magna, consectetur a sagittis nec,
+            eleifend eget enim. Maecenas in laoreet eros. Vivamus laoreet justo sit
+            amet elit vehicula semper. Maecenas et eleifend nisl. Vestibulum pharetra
+            laoreet enim id pretium. Duis cursus velit sit amet nibh molestie vulputate
+            ac nec mauris. Curabitur mattis commodo cursus.
+        size:
+          width: 100%
+        type: staticText
+      - elements:
+        - layers:
+          - encodings:
+              color: it
+              x: de2000
+              y: e_logr25
+            type: points
+          size:
+            height: 600px
+            width: 100%
+          type: canvas2D
+        - layers:
+          - encodings:
+              color: it
+              x: e_logd25
+              y: bt
+            type: points
+          size:
+            height: 600px
+            width: 100%
+          type: canvas2D
+        - layers:
+          - encodings:
+              color: al2000
+              x: logr25
+              y: e_bt
+            type: points
+          size:
+            height: 600px
+            width: 100%
+          type: canvas2D
+        settings: {}
+        size:
+          width: 100%
+        type: horizontalGroup
+      settings: {}
+      size:
+        width: 100%
+      type: verticalGroup
+    - elements:
+      - layers:
+        - encodings:
+            color: bt
+            x: al2000
+            y: de2000
+          type: points
+        settings: {}
+        size:
+          height: 1200px
+          width: 100%
+        type: canvas2D
+      - content: Static text content
+        settings:
+          content: In vehicula condimentum orci vel tincidunt. Vestibulum volutpat
+            tortor quis efficitur rhoncus. Duis iaculis libero libero, eget pretium
+            sem commodo in. Nulla consectetur, nisl at feugiat suscipit, erat purus
+            posuere libero, sed tempor nibh nibh in lorem. Phasellus et suscipit mi.
+            Ut orci nibh, tincidunt sit amet elementum non, euismod vitae purus. Proin
+            ut aliquet risus, at vehicula ante. Suspendisse sit amet sodales nulla,
+            ut vehicula metus. Etiam interdum ultricies tellus a vulputate. Quisque
+            in erat rhoncus, bibendum risus sed, condimentum dolor. Integer eu venenatis
+            arcu.
+        size:
+          width: 100%
+        type: staticText
+      settings: {}
+      size:
+        width: 100%
+      type: verticalGroup
+    settings:
+      tabNames: First tab;Second tab;The big overview
+    size:
+      width: 100%
+    type: tabGroup
+  type: verticalGroup
+targetConcept: survey
+templateId: survey_dashboard.yaml

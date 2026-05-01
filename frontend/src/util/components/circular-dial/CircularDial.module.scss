@@ -1,0 +1,76 @@
+.wrapper {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.item {
+    position: relative;
+    width: 100%;
+    height: 35px;
+    box-sizing: border-box;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+}
+
+.barBox {
+    position: absolute;
+    top: 0;
+    left: 60px;
+    width: calc(100% - 60px);
+    height: 35px;
+    box-sizing: border-box;
+    //background-color:  rgba(255,0,255,0.2);
+}
+
+
+.totalBar {
+    position: absolute;
+    top: 5px;
+    height: 24px;
+    background: linear-gradient(to right,
+            color-mix(in srgb, var(--color-fg) 5%, var(--color-bg3)),
+            color-mix(in srgb, var(--color-fg) 20%, var(--color-bg3)));
+}
+
+.selectedBar {
+    position: absolute;
+    top: 5px;
+    height: 24px;
+    //background-color:  color-mix(in srgb, var(  --color-sp1) 35%, transparent);
+    background: linear-gradient(to right,
+            color-mix(in srgb, var(--color-sp1) 15%, var(--color-bg3)),
+            color-mix(in srgb, var(--color-sp1) 55%, var(--color-bg3)));
+}
+
+.label {
+    position: absolute;
+    left: 65px;
+    top: 8px;
+    height: 24px;
+}
+
+.count {
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 52px;
+    height: 24px;
+    text-align: right;
+    font-weight: lighter;
+    color: var(--color-sp1);
+}
+
+.filterIndication {
+    position: absolute;
+    left: 0;
+    top: 1px;
+    width: 4px;
+    height: 32px;
+    background-color: var(--color-sp2);
+}

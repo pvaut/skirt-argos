@@ -1,0 +1,21 @@
+name: Template for lara_analysis
+rootElement:
+  elements:
+  - elements:
+    - layers:
+      - encodings:
+          x: Autocorrelation function for corr(alpha_powerU-lnL0_radio)
+          y: Autocorrelation function for corr(fFF_radio-lnL_starBB)
+        table: table
+        type: points
+      size:
+        height: 600px
+        width: 50%
+      type: canvas2D
+    settings: {}
+    size:
+      width: 100%
+    type: horizontalGroup
+  type: verticalGroup
+targetConcept: lara_analysis
+templateId: autoTemplate_lara_analysis.yaml

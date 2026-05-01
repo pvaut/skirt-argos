@@ -1,0 +1,511 @@
+computationRecipes:
+  parttype0:
+  - expression: "vector(\n  vecX(Position)-736,\n  vecY(Position)-20560,\n  vecZ(Position)-6325\n\
+      )"
+    id: Centered_position
+    name: Centered position
+  - expression: vecSize(Centered_position)
+    id: Distance_to_center
+    name: Distance to center
+  - expression: "vecDot(\n  vecNorm(Centered_position),\n  vecNorm(Velocity)\n)"
+    id: Radial_velocity_fraction
+    name: Radial velocity fraction
+name: A TNG cutout dashboard
+rootElement:
+  elements:
+  - elements:
+    - elements:
+      - content: Static text content
+        settings:
+          content: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras at
+            nunc gravida, gravida nulla a, fringilla libero. Proin vitae dolor a metus
+            dignissim cursus a vel risus. Integer leo justo, pellentesque sed elit
+            tempor, feugiat vehicula sapien. Sed vel quam in tortor posuere pulvinar.
+            Vivamus eu dui vel odio mattis tincidunt id at erat. Sed elit lacus, mollis
+            ut mauris ac, interdum condimentum felis. Ut nec varius massa, vitae consectetur
+            felis. Donec ac erat venenatis, condimentum est a, bibendum sapien. Sed
+            vitae lorem non est ultricies porttitor eu eget eros. Class aptent taciti
+            sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+            Aenean egestas dictum metus ac dignissim. Nam libero urna, interdum accumsan
+            laoreet efficitur, pharetra non metus.
+        size:
+          width: 100%
+        type: staticText
+      - elements:
+        - layers:
+          - encodings:
+              position: Position
+              velocity: Velocity
+            settings:
+              pointSizeFactor: 1
+            table: parttype0
+            type: volumePointsVelocity
+          settings:
+            syncGroupVolume: vol
+            title: Gas Kinematics
+          size:
+            height: 700px
+            width: 100%
+          type: canvasVolume
+        - layers:
+          - encodings:
+              position: Position
+              velocity: Velocity
+            settings:
+              pointSizeFactor: 1
+            table: parttype4
+            type: volumePointsVelocity
+          settings:
+            animate: false
+            syncGroupVolume: vol
+            title: Stellar Kinematics
+          size:
+            height: 700px
+            width: 100%
+          type: canvasVolume
+        settings: {}
+        size:
+          width: 100%
+        type: horizontalGroup
+      - elements:
+        - layers:
+          - encodings:
+              position: Position
+              velocity: Velocity
+            settings:
+              pointSizeFactor: 1
+            table: parttype1
+            type: volumePointsVelocity
+          settings:
+            animate: false
+            syncGroupVolume: vol
+            title: DM Halo Kinematics
+          size:
+            height: 700px
+            width: 50%
+          type: canvasVolume
+        settings: {}
+        size:
+          width: 100%
+        type: horizontalGroup
+      - elements:
+        - content: Static text content
+          settings:
+            content: Etiam id urna nec purus maximus egestas. Suspendisse feugiat
+              tempus mi ac gravida. Quisque efficitur massa vel venenatis commodo.
+              Nullam tellus odio, egestas et lectus at, placerat condimentum turpis.
+              Curabitur in ante non neque feugiat vulputate. Nam vel purus erat. In
+              bibendum mauris quis dui rhoncus venenatis. Proin vehicula tellus et
+              eros gravida, eget placerat erat mollis. Vivamus cursus id odio in lacinia.
+              Nulla quam diam, faucibus commodo posuere sed, scelerisque vel nisl.
+          size:
+            width: 100%
+          type: staticText
+        - elements:
+          - layers:
+            - encodings:
+                color: Density
+                position: Velocity
+              table: parttype0
+              type: volumePoints
+            size:
+              height: 600px
+              width: 100%
+            type: canvasVolume
+          - layers:
+            - encodings:
+                color: Masses
+                position: Velocity
+              table: parttype0
+              type: volumePoints
+            size:
+              height: 600px
+              width: 100%
+            type: canvasVolume
+          settings: {}
+          size:
+            width: 100%
+          type: horizontalGroup
+        - elements:
+          - layers:
+            - encodings:
+                color: SubfindVelDisp
+                position: Velocity
+              table: parttype1
+              type: volumePoints
+            size:
+              height: 600px
+              width: 100%
+            type: canvasVolume
+          - layers:
+            - encodings:
+                color: Masses
+                position: Velocity
+              table: parttype4
+              type: volumePoints
+            size:
+              height: 600px
+              width: 100%
+            type: canvasVolume
+          settings: {}
+          size:
+            width: 100%
+          type: horizontalGroup
+        settings:
+          title: A section title
+        size:
+          width: 100%
+        type: verticalGroup
+      settings: {}
+      size:
+        width: 100%
+      type: verticalGroup
+    - elements:
+      - elements:
+        - layers:
+          - encodings:
+              position: Position
+              velocity: Velocity
+            settings:
+              pointSizeFactor: 1
+            table: parttype0
+            type: volumePointsVelocity
+          settings:
+            syncGroupVolume: vol
+            title: Gas kinematics
+          size:
+            height: 700px
+            width: 100%
+          type: canvasVolume
+        - layers:
+          - encodings:
+              color: GFM_Metals_I_1
+              position: Position
+            settings:
+              colorGammaFactor: 0.45
+              colorRamp: magma2
+              pointSizeFactor: 1
+            table: parttype0
+            type: volumePoints
+          settings:
+            animate: false
+            syncGroupVolume: vol
+            title: Gas Star Formation Rate
+          size:
+            height: 700px
+            width: 100%
+          type: canvasVolume
+        settings: {}
+        size:
+          width: 100%
+        type: horizontalGroup
+      - elements:
+        - layers:
+          - encodings:
+              values: StarFormationRate
+            settings:
+              yScaleType: log1pCount
+            table: parttype0
+            type: histogram
+          settings:
+            title: Gas - Star Formation Rate
+          size:
+            height: 400px
+            width: 100%
+          type: canvas2D
+        - layers:
+          - encodings:
+              values: GFM_Metallicity
+            settings:
+              yScaleType: count
+            table: parttype0
+            type: histogram
+          settings:
+            title: Gas - GFM Metallicity
+          size:
+            height: 400px
+            width: 100%
+          type: canvas2D
+        - layers:
+          - encodings:
+              values: GFM_AGNRadiation
+            table: parttype0
+            type: histogram
+          settings:
+            title: Gas - AGN Radiation
+          size:
+            height: 400px
+            width: 100%
+          type: canvas2D
+        settings: {}
+        size:
+          width: 100%
+        type: horizontalGroup
+      - elements:
+        - layers:
+          - encodings:
+              color: ElectronAbundance
+              x: GFM_Metallicity
+              y: StarFormationRate
+            settings:
+              pointSizeFactor: 1
+            table: parttype0
+            type: points
+          settings:
+            title: Gas
+          size:
+            height: 600px
+            width: 100%
+          type: canvas2D
+        - layers:
+          - encodings:
+              color: ElectronAbundance
+              x: GFM_Metallicity
+              y: GFM_Metals_I_1
+            settings:
+              colorGammaFactor: 0.5
+              pointSizeFactor: 1
+            table: parttype0
+            type: points
+          settings:
+            title: Gas
+          size:
+            height: 600px
+            width: 100%
+          type: canvas2D
+        settings: {}
+        size:
+          width: 100%
+        type: horizontalGroup
+      - elements:
+        - layers:
+          - encodings:
+              color: StarFormationRate
+              position: Velocity
+            settings:
+              colorGammaFactor: 0.22
+              colorRamp: magma2
+              pointSizeFactor: 2
+            table: parttype0
+            type: volumePoints
+          settings:
+            syncGroupVolume: vel
+            title: Gas Velocity vs Star Formation Rate
+          size:
+            height: 700px
+            width: 100%
+          type: canvasVolume
+        - layers:
+          - encodings:
+              color: ElectronAbundance
+              position: Velocity
+            settings:
+              pointSizeFactor: 2
+            table: parttype0
+            type: volumePoints
+          settings:
+            animate: false
+            syncGroupVolume: vel
+            title: Gas Velocity vs. Electron Abundance
+          size:
+            height: 700px
+            width: 100%
+          type: canvasVolume
+        settings: {}
+        size:
+          width: 100%
+        type: horizontalGroup
+      - content: Static text content
+        settings:
+          content: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+            minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+            ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+            cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
+            id est laborum.
+        size:
+          width: 100%
+        type: staticText
+      settings: {}
+      size:
+        width: 100%
+      type: verticalGroup
+    - elements:
+      - elements:
+        - layers:
+          - encodings:
+              position: Position
+              velocity: Velocity
+            settings:
+              pointSizeFactor: 1
+            table: parttype4
+            type: volumePointsVelocity
+          settings:
+            syncGroupVolume: vol
+            title: Stellar Kinematics
+          size:
+            height: 600px
+            width: 100%
+          type: canvasVolume
+        - layers:
+          - encodings:
+              color: GFM_StellarFormationTime
+              position: Position
+            settings:
+              colorGammaFactor: 0.47
+              colorRamp: rainbow
+              colorRangeMax: 1
+              pointSizeFactor: 1
+            table: parttype4
+            type: volumePoints
+          settings:
+            animate: false
+            syncGroupVolume: vol
+            title: Stellar Formation Time
+          size:
+            height: 600px
+            width: 100%
+          type: canvasVolume
+        settings: {}
+        size:
+          width: 100%
+        type: horizontalGroup
+      - elements:
+        - layers:
+          - encodings:
+              color: GFM_Metallicity
+              x: GFM_StellarFormationTime
+              y: GFM_Metals_I_1
+            settings:
+              colorGammaFactor: 0.37
+              colorRamp: magma2
+              pointSizeFactor: 1.6
+            table: parttype4
+            type: points
+          settings:
+            title: Stars
+          size:
+            height: 400px
+            width: 100%
+          type: canvas2D
+        - layers:
+          - encodings:
+              values: GFM_Metallicity
+            table: parttype4
+            type: histogram
+          settings:
+            title: Stars
+          size:
+            height: 400px
+            width: 50%
+          type: canvas2D
+        settings: {}
+        size:
+          width: 100%
+        type: horizontalGroup
+      - elements:
+        - layers:
+          - encodings:
+              values: Potential
+            table: parttype4
+            type: histogram
+          settings:
+            title: Stars - Potential
+          size:
+            height: 400px
+            width: 100%
+          type: canvas2D
+        - layers:
+          - encodings:
+              values: StellarHsml
+            settings:
+              yScaleType: log1pCount
+            table: parttype4
+            type: histogram
+          settings:
+            title: Stars - Stellar Hsml
+          size:
+            height: 400px
+            width: 100%
+          type: canvas2D
+        - layers:
+          - encodings:
+              values: SubfindVelDisp
+            table: parttype4
+            type: histogram
+          settings:
+            title: Stars - Velocity Dispersion
+          size:
+            height: 400px
+            width: 100%
+          type: canvas2D
+        settings: {}
+        size:
+          width: 100%
+        type: horizontalGroup
+      - elements:
+        - layers:
+          - encodings:
+              color: GFM_StellarFormationTime
+              position: Velocity
+            settings:
+              colorRamp: rainbow
+              pointSizeFactor: 2.2
+            table: parttype4
+            type: volumePoints
+          settings:
+            syncGroupVolume: vel
+          size:
+            height: 600px
+            width: 100%
+          type: canvasVolume
+        - layers:
+          - encodings:
+              color: GFM_StellarFormationTime
+              x: GFM_Metallicity
+              y: GFM_Metals_I_1
+            settings:
+              colorRamp: rainbow
+              pointSizeFactor: 1.8
+            table: parttype4
+            type: points
+          size:
+            height: 600px
+            width: 100%
+          type: canvas2D
+        settings: {}
+        size:
+          width: 100%
+        type: horizontalGroup
+      settings: {}
+      size:
+        width: 100%
+      type: verticalGroup
+    settings:
+      tabNames: Kinematics Overview;Gas Component;Stellar Component
+    size:
+      width: 100%
+    type: tabGroup
+  - elements:
+    - layers:
+      - encodings:
+          color: Radial_velocity_fraction
+          position: Centered_position
+        settings:
+          colorGammaFactor: 0.2
+          colorRampSwapped: true
+          pointSizeFactor: 2
+        table: parttype0
+        type: volumePoints
+      size:
+        height: 600px
+        width: 50%
+      type: canvasVolume
+    settings: {}
+    size:
+      width: 100%
+    type: horizontalGroup
+  type: verticalGroup
+targetConcept: tng_cutout_parttype1
+templateId: cutout_dashboard.yaml

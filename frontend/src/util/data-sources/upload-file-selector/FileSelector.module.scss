@@ -1,0 +1,27 @@
+.selectorContainer,
+.selectorContainerDragging {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 360px;
+    height: 170px;
+    border: 1px dashed color-mix(in srgb, var(--color-sp1) 75%, transparent);
+    background: color-mix(in srgb, var(--color-sp1) 2%, transparent);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+
+    box-shadow: 0 0 20px color-mix(in srgb, var(--color-sp1) 15%, transparent) inset;
+
+    transition: transform 0.2s;
+    cursor: pointer;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
+.selectorContainerDragging {
+    border: 2px dashed color-mix(in srgb, var(--color-sp1) 100%, transparent);
+    background: color-mix(in srgb, var(--color-sp1) 40%, transparent);
+
+}

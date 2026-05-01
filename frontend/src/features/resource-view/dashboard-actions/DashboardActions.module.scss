@@ -1,0 +1,48 @@
+.wrapper {
+    width: 70vw;
+    height: 80vh;
+
+    background: color-mix(in srgb, var(--color-sp1) 30%, var(--color-bg3));
+}
+
+.header {
+    box-sizing: border-box;
+    padding: 20px;
+    height: 60px;
+    border-bottom: 2px solid var(--color-sp1);
+    font-size: 140%;
+    font-weight: bold;
+}
+
+.body {
+    overflow-y: auto;
+    height: calc(100% - 80px);
+}
+
+.line,  .lineOpened, .lineDisabled {
+    padding: 20px;
+    margin: 10px 0;
+    background: color-mix(in srgb, var(--color-sp1) 35%, var(--color-bg3));
+}
+
+.line {
+    cursor: pointer;
+    &:hover {
+        background: color-mix(in srgb, var(--color-sp1) 45%, var(--color-bg3));
+    }
+}
+
+.lineDisabled {
+    background: transparent;
+    opacity:0.5;
+}
+
+.lineOpened {
+    background: color-mix(in srgb, var(--color-sp1) 45%, var(--color-bg3));
+
+}
+
+.issues {
+    padding: 10px 0;
+    color: rgb(255, 132, 0);
+}

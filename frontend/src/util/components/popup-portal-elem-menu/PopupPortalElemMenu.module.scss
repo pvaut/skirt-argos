@@ -1,0 +1,66 @@
+.menu {
+    box-sizing: border-box;
+    position: absolute;
+    background-color: color-mix(in srgb, var(--color-sp1) 50%, var(--color-bg3));
+
+    background: linear-gradient(to right,
+            color-mix(in srgb, var(--color-sp1) 45%, var(--color-bg3)),
+            color-mix(in srgb, var(--color-sp1) 60%, var(--color-bg3)));
+
+
+    //box-shadow: 0 0 20px rgba(0,0,0,0.25);
+    margin: 0;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+
+    transition: left 0.2s;
+
+}
+
+
+.menuTopBorder {
+    position: absolute;
+    background-color: color-mix(in srgb, var(--color-sp1) 60%, var(--color-bg3));
+    height: 15px;
+    //border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+    background: linear-gradient(to right,
+            color-mix(in srgb, var(--color-sp1) 60%, var(--color-bg3)),
+            color-mix(in srgb, var(--color-sp1) 45%, var(--color-bg3)),
+        );
+
+}
+
+.menuBottomBorder {
+    position: absolute;
+    background-color: color-mix(in srgb, var(--color-sp1) 60%, var(--color-bg3));
+    height: 15px;
+    //border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+    background: linear-gradient(to right,
+            color-mix(in srgb, var(--color-sp1) 60%, var(--color-bg3)),
+            color-mix(in srgb, var(--color-sp1) 45%, var(--color-bg3)),
+        );
+
+}
+
+.menuRightBorder {
+    position: absolute;
+    background-color: color-mix(in srgb, var(--color-sp1) 45%, var(--color-bg3));
+    width: 15px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.chartOverlay {
+    position: absolute;
+    background: linear-gradient(110deg,
+            color-mix(in srgb, var(--color-sp1) 5%, transparent) 0%,
+            color-mix(in srgb, var(--color-sp1) 25%, transparent) 60%,
+            color-mix(in srgb, var(--color-sp1) 17%, transparent) 60%,
+            color-mix(in srgb, var(--color-sp1) 15%, transparent) 70%,
+            color-mix(in srgb, var(--color-sp1) 5%, transparent) 100%,
+        );
+}

@@ -1,0 +1,123 @@
+name: A TNG snapshot dashboard
+rootElement:
+  elements:
+  - elements:
+    - layers:
+      - encodings:
+          position: Position
+          slice: SubhaloPos_I_2
+          velocity: Velocity
+        settings:
+          pointSizeFactor: 1.2
+          velocityVectorSize: 0
+        table: table
+        type: volumePointsVelocity
+      settings:
+        animate: false
+      size:
+        height: 700px
+        width: 100%
+      type: canvasVolume
+    - elements:
+      - layers:
+        - encodings:
+            values: SubhaloPos_I_2
+          settings:
+            resolutionNudgeFactor: 5.5
+          table: table
+          type: histogram
+        settings: {}
+        size:
+          height: 50%
+          width: 100%
+        type: canvas2D
+      - layers:
+        - encodings:
+            values: SubhaloVel_I_0
+          settings:
+            yScaleType: log1pCount
+          table: table
+          type: histogram
+        settings: {}
+        size:
+          height: 50%
+          width: 100%
+        type: canvas2D
+      settings:
+        title: ''
+      size:
+        height: 700px
+        width: 100%
+      type: verticalGroup
+    settings: {}
+    size:
+      width: 100%
+    type: horizontalGroup
+  - elements:
+    - layers:
+      - encodings:
+          color: SubhaloVel_I_2
+          slice: SubhaloPos_I_2
+          x: SubhaloVel_I_0
+          y: SubhaloVel_I_1
+        settings:
+          colorRamp: redBlue1
+          colorRangeMax: 0.64
+          colorRangeMin: 0.31
+          pointSizeFactor: 3.6
+        table: table
+        type: points
+      settings:
+        aspectRatio11: true
+        syncGroupSlice: ''
+        syncGroupXAxis: ''
+        syncGroupYAxis: ''
+      size:
+        height: 600px
+        width: 100%
+      type: canvas2D
+    - layers:
+      - encodings:
+          values: SubhaloVelDisp
+        settings:
+          yScaleType: log1pCount
+        table: table
+        type: histogram
+      settings: {}
+      size:
+        height: 600px
+        width: 100%
+      type: canvas2D
+    settings: {}
+    size:
+      width: 100%
+    type: horizontalGroup
+  - encodings: {}
+    settings:
+      columns:
+      - id: SubhaloPos_I_0
+        width: 150
+      - id: SubhaloPos_I_1
+        width: 150
+      - id: SubhaloPos_I_2
+        width: 150
+      - id: SubhaloVel_I_0
+        width: 150
+      - id: SubhaloVel_I_1
+        width: 150
+      - id: SubhaloVel_I_2
+        width: 150
+      - id: SubhaloMass
+        width: 150
+      - id: SubhaloVelDisp
+        width: 150
+      - id: SubhaloLen
+        width: 150
+    size:
+      height: 600px
+      width: 100%
+    table: table
+    type: tableView
+  type: verticalGroup
+targetConcept: tng_snapshot
+templateId: snapshot_dashboard.yaml

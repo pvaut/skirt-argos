@@ -1,0 +1,482 @@
+conceptDefinition:
+  isLocal: true
+  isTable: false
+  id: tng_galaxy
+  name: TNG Galaxies
+  namePlural: ''
+  description: ''
+  tableConcepts:
+    - path: /PartType0
+      nameSingle: Part Type0
+      namePlural: Gas
+      description: ''
+      propertyGroups: []
+      properties:
+        - path: /PartType0/Coordinates
+          name: Coordinates
+          description: ''
+          transformationExpression: x
+          groupId: null
+          dataType: vector3d
+          children:
+            - index: 0
+              name: Coordinates - X
+              dataType: double
+            - index: 1
+              name: Coordinates - Y
+              dataType: double
+            - index: 2
+              name: Coordinates - Z
+              dataType: double
+          decimalDigits: null
+          totalChildCount: 3
+        - path: /PartType0/Velocities
+          name: Velocities
+          description: ''
+          transformationExpression: x
+          groupId: null
+          dataType: vector3d
+          children:
+            - index: 0
+              name: Velocities - X
+              dataType: float
+            - index: 1
+              name: Velocities - Y
+              dataType: float
+            - index: 2
+              name: Velocities - Z
+              dataType: float
+          decimalDigits: null
+          totalChildCount: 3
+        - path: /PartType0/Density
+          name: Density
+          description: ''
+          transformationExpression: x
+          groupId: null
+          dataType: float
+          children: []
+          decimalDigits: null
+        - path: /PartType0/Potential
+          name: Potential
+          description: ''
+          transformationExpression: x
+          groupId: null
+          dataType: float
+          children: []
+          decimalDigits: null
+        - path: /PartType0/SubfindVelDisp
+          name: Subfind Vel Disp
+          description: ''
+          transformationExpression: x
+          groupId: null
+          dataType: float
+          children: []
+          decimalDigits: null
+        - path: /PartType0/ElectronAbundance
+          name: Electron Abundance
+          description: ''
+          transformationExpression: x
+          groupId: null
+          dataType: float
+          children: []
+          decimalDigits: null
+        - path: /PartType0/GFM_Metallicity
+          name: GFM Metallicity
+          description: ''
+          transformationExpression: x
+          groupId: null
+          dataType: float
+          children: []
+          decimalDigits: null
+        - path: /PartType0/StarFormationRate
+          name: Star Formation Rate
+          description: ''
+          transformationExpression: x
+          groupId: null
+          dataType: float
+          children: []
+          decimalDigits: null
+        - path: /PartType0/MagneticField
+          name: Magnetic Field
+          description: ''
+          transformationExpression: x
+          groupId: null
+          dataType: vector3d
+          children:
+            - index: 0
+              name: Magnetic Field - X
+              dataType: float
+            - index: 1
+              name: Magnetic Field - Y
+              dataType: float
+            - index: 2
+              name: Magnetic Field - Z
+              dataType: float
+          decimalDigits: null
+          totalChildCount: 3
+      labelColumnPath: null
+    - path: /PartType4
+      nameSingle: Part Type4
+      namePlural: Stars
+      description: ''
+      propertyGroups: []
+      properties:
+        - path: /PartType4/Coordinates
+          name: Coordinates
+          description: ''
+          transformationExpression: x
+          groupId: null
+          dataType: vector3d
+          children:
+            - index: 0
+              name: Coordinates - X
+              dataType: double
+            - index: 1
+              name: Coordinates - Y
+              dataType: double
+            - index: 2
+              name: Coordinates - Z
+              dataType: double
+          decimalDigits: null
+          totalChildCount: 3
+        - path: /PartType4/Velocities
+          name: Velocities
+          description: ''
+          transformationExpression: x
+          groupId: null
+          dataType: vector3d
+          children:
+            - index: 0
+              name: Velocities - X
+              dataType: float
+            - index: 1
+              name: Velocities - Y
+              dataType: float
+            - index: 2
+              name: Velocities - Z
+              dataType: float
+          decimalDigits: null
+          totalChildCount: 3
+        - path: /PartType4/Masses
+          name: Masses
+          description: ''
+          transformationExpression: x
+          groupId: null
+          dataType: float
+          children: []
+          decimalDigits: null
+        - path: /PartType4/Potential
+          name: Potential
+          description: ''
+          transformationExpression: x
+          groupId: null
+          dataType: float
+          children: []
+          decimalDigits: null
+        - path: /PartType4/SubfindVelDisp
+          name: Subfind Vel Disp
+          description: ''
+          transformationExpression: x
+          groupId: null
+          dataType: float
+          children: []
+          decimalDigits: null
+        - path: /PartType4/DistanceAtFormation
+          name: Distance At Formation
+          description: ''
+          transformationExpression: x
+          groupId: null
+          dataType: float
+          children: []
+          decimalDigits: null
+        - path: /PartType4/GFM_Metallicity
+          name: GFM Metallicity
+          description: ''
+          transformationExpression: x
+          groupId: null
+          dataType: float
+          children: []
+          decimalDigits: null
+        - path: /PartType4/GFM_StellarFormationTime
+          name: GFM Stellar Formation Time
+          description: ''
+          transformationExpression: x
+          groupId: null
+          dataType: float
+          children: []
+          decimalDigits: null
+      labelColumnPath: null
+  globalAttributeDefs: []
+  serverVersion: 1
+dashboardTemplate:
+  targetConcept: tng_galaxy
+  templateId: autoTemplate_concept_Gf196697a_85f8_49a6_8459_f0cafc36c8da.yaml
+  name: Template for TNG Galaxies
+  rootElement:
+    elements:
+      - type: verticalGroup
+        elements:
+          - type: horizontalGroup
+            elements:
+              - type: canvasVolume
+                size:
+                  height: 600px
+                  width: 100%
+                layers:
+                  - type: volumePointsVelocity
+                    encodings:
+                      position: Coordinates
+                      velocity: Velocities
+                    table: $PartType0
+                    settings:
+                      velocityVectorSize: 0
+                      velocityVectorOpacity: 0
+                      pointSizeFactor: 1.2
+                settings:
+                  syncGroupVolume: vol
+              - type: canvasVolume
+                size:
+                  height: 600px
+                  width: 100%
+                layers:
+                  - type: volumePointsVelocity
+                    encodings:
+                      position: Coordinates
+                      velocity: Velocities
+                    table: $PartType4
+                    settings:
+                      velocityVectorSize: 0
+                      velocityVectorOpacity: 0
+                      pointSizeFactor: 1.2
+                settings:
+                  syncGroupVolume: vol
+            size:
+              width: 100%
+            settings: {}
+        size:
+          width: 100%
+        settings:
+          title: Kinematics
+      - type: verticalGroup
+        elements:
+          - type: horizontalGroup
+            elements:
+              - type: canvasVolume
+                size:
+                  width: 100%
+                  height: 600px
+                layers:
+                  - type: volumePoints
+                    encodings:
+                      position: Coordinates
+                      color: log_Density
+                      size: log_Density
+                    table: $PartType0
+                    settings:
+                      sizeGammaFactor: 0.5
+                      colorRamp: default
+                      scaleOpacityWithSize: true
+                      pointSizeFactor: 4.6
+                settings:
+                  syncGroupVolume: vol
+                  title: Gas Density
+              - type: canvasVolume
+                size:
+                  width: 100%
+                  height: 600px
+                layers:
+                  - type: volumePoints
+                    encodings:
+                      position: Coordinates
+                      color: GFM_Metallicity
+                      size: GFM_Metallicity
+                    table: $PartType0
+                    settings:
+                      colorRamp: defaultToBlack
+                      colorGammaFactor: 0.31
+                      sizeGammaFactor: 0.45
+                      pointSizeFactor: 6.8
+                settings:
+                  syncGroupVolume: vol
+                  title: Gas Metallicity
+            size:
+              width: 100%
+            settings: {}
+          - type: horizontalGroup
+            elements:
+              - type: canvasVolume
+                size:
+                  height: 600px
+                  width: 100%
+                layers:
+                  - type: volumePoints
+                    encodings:
+                      position: Coordinates
+                      color: StarFormationRate
+                      size: StarFormationRate
+                    table: $PartType0
+                    settings:
+                      colorGammaFactor: 0.19
+                      colorRamp: magma
+                      scaleOpacityWithSize: true
+                      sizeGammaFactor: 0.23
+                      colorRangeMin: 0.04
+                      colorRangeMax: 0.71
+                      pointSizeFactor: 6
+                settings:
+                  syncGroupVolume: vol
+                  title: Star Formation Rate
+              - type: canvasVolume
+                size:
+                  height: 600px
+                  width: 100%
+                layers:
+                  - type: volumePointsVelocity
+                    encodings:
+                      position: Coordinates
+                      velocity: MagneticField
+                    table: $PartType0
+                    settings:
+                      pointSizeFactor: 0
+                      velocityVectorSize: 2
+                      velocityVectorOpacity: 0.5
+                settings:
+                  syncGroupVolume: vol
+                  title: Magnetic field
+            size:
+              width: 100%
+            settings: {}
+          - type: horizontalGroup
+            elements:
+              - type: canvas2D
+                size:
+                  height: 600px
+                  width: 100%
+                layers:
+                  - type: points
+                    encodings:
+                      x: log_Density
+                      'y': ElectronAbundance
+                      color: GFM_Metallicity
+                    table: $PartType0
+                    settings:
+                      pointSizeFactor: 1.6
+                      colorGammaFactor: 0.32
+              - type: canvas2D
+                size:
+                  height: 600px
+                  width: 100%
+                layers:
+                  - type: points
+                    encodings:
+                      x: GFM_Metallicity
+                      'y': StarFormationRate
+                      color: Potential
+                    table: $PartType0
+                    settings:
+                      pointSizeFactor: 1.8
+            size:
+              width: 100%
+            settings: {}
+        size:
+          width: 100%
+        settings:
+          title: Gas
+      - type: verticalGroup
+        elements:
+          - type: horizontalGroup
+            elements:
+              - type: canvasVolume
+                size:
+                  height: 600px
+                  width: 100%
+                layers:
+                  - type: volumePoints
+                    encodings:
+                      position: Coordinates
+                      color: log_GFM_Metallicity
+                      size: log_GFM_Metallicity
+                    table: $PartType4
+                    settings:
+                      colorRamp: default
+                      colorGammaFactor: 0.52
+                      pointSizeFactor: 3.8
+                      scaleOpacityWithSize: false
+                      colorRangeMax: 0.86
+                      colorRangeMin: 0.11
+                settings:
+                  syncGroupVolume: vol
+              - type: canvasVolume
+                size:
+                  height: 600px
+                  width: 100%
+                layers:
+                  - type: volumePoints
+                    encodings:
+                      position: Coordinates
+                      color: GFM_StellarFormationTime
+                    table: $PartType4
+                    settings:
+                      colorRamp: rainbow
+                      pointSizeFactor: 4
+                      colorGammaFactor: 0.91
+                settings:
+                  syncGroupVolume: vol
+            size:
+              width: 100%
+            settings: {}
+          - type: horizontalGroup
+            elements:
+              - type: canvas2D
+                size:
+                  height: 600px
+                  width: 100%
+                layers:
+                  - type: points
+                    encodings:
+                      x: GFM_StellarFormationTime
+                      'y': GFM_Metallicity
+                      color: Potential
+                    table: $PartType4
+                    settings:
+                      pointSizeFactor: 1
+              - type: canvas2D
+                size:
+                  height: 600px
+                  width: 100%
+                layers:
+                  - type: points
+                    encodings:
+                      x: GFM_Metallicity
+                      'y': Potential
+                      color: GFM_StellarFormationTime
+                    table: $PartType4
+                    settings:
+                      pointSizeFactor: 1.2
+                      colorRamp: rainbow
+                      colorGammaFactor: 0.9
+            size:
+              width: 100%
+            settings: {}
+        size:
+          width: 100%
+        settings:
+          title: Stars
+    type: verticalGroup
+  computationRecipes:
+    $PartType0:
+      - id: log_Density
+        name: log Density
+        groupName: null
+        expression: log10(Density)
+        description: ''
+        unitName: ''
+        decimalDigits: null
+    $PartType4:
+      - id: log_GFM_Metallicity
+        name: log GFM_Metallicity
+        groupName: null
+        expression: log10(max(0.001, GFM_Metallicity))
+        description: ''
+        unitName: ''
+        decimalDigits: null

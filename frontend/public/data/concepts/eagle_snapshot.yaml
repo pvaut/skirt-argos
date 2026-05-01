@@ -1,0 +1,412 @@
+conceptDefinition:
+  isLocal: true
+  isTable: false
+  id: eagle_snapshot
+  name: EAGLE snapshot
+  namePlural: ''
+  description: ''
+  tableConcepts:
+    - path: /PartType0
+      nameSingle: Part Type0
+      namePlural: Gas
+      description: ''
+      propertyGroups: []
+      properties:
+        - path: /PartType0/Coordinates
+          name: Coordinates
+          description: ''
+          transformationExpression: x
+          groupId: null
+          dataType: vector3d
+          children:
+            - index: 0
+              name: Coordinates - X
+              dataType: double
+            - index: 1
+              name: Coordinates - Y
+              dataType: double
+            - index: 2
+              name: Coordinates - Z
+              dataType: double
+          decimalDigits: null
+          totalChildCount: 3
+        - path: /PartType0/Density
+          name: Density
+          description: ''
+          transformationExpression: x
+          groupId: null
+          dataType: float
+          children: []
+          decimalDigits: null
+        - path: /PartType0/Metallicity
+          name: Metallicity
+          description: ''
+          transformationExpression: x
+          groupId: null
+          dataType: float
+          children: []
+          decimalDigits: null
+        - path: /PartType0/SmoothingLength
+          name: Smoothing Length
+          description: ''
+          transformationExpression: x
+          groupId: null
+          dataType: float
+          children: []
+          decimalDigits: null
+        - path: /PartType0/Temperature
+          name: Temperature
+          description: ''
+          transformationExpression: x
+          groupId: null
+          dataType: float
+          children: []
+          decimalDigits: null
+        - path: /PartType0/Velocity
+          name: Velocity
+          description: ''
+          transformationExpression: x
+          groupId: null
+          dataType: vector3d
+          children:
+            - index: 0
+              name: Velocity - X
+              dataType: float
+            - index: 1
+              name: Velocity - Y
+              dataType: float
+            - index: 2
+              name: Velocity - Z
+              dataType: float
+          decimalDigits: null
+          totalChildCount: 3
+      labelColumnPath: null
+    - path: /PartType4
+      nameSingle: Part Type4
+      namePlural: Stars
+      description: ''
+      propertyGroups: []
+      properties:
+        - path: /PartType4/BirthDensity
+          name: Birth Density
+          description: ''
+          transformationExpression: x
+          groupId: null
+          dataType: float
+          children: []
+          decimalDigits: null
+        - path: /PartType4/Coordinates
+          name: Coordinates
+          description: ''
+          transformationExpression: x
+          groupId: null
+          dataType: vector3d
+          children:
+            - index: 0
+              name: Coordinates - X
+              dataType: double
+            - index: 1
+              name: Coordinates - Y
+              dataType: double
+            - index: 2
+              name: Coordinates - Z
+              dataType: double
+          decimalDigits: null
+          totalChildCount: 3
+        - path: /PartType4/Feedback_EnergyFraction
+          name: Feedback Energy Fraction
+          description: ''
+          transformationExpression: x
+          groupId: null
+          dataType: float
+          children: []
+          decimalDigits: null
+        - path: /PartType4/Metallicity
+          name: Metallicity
+          description: ''
+          transformationExpression: x
+          groupId: null
+          dataType: float
+          children: []
+          decimalDigits: null
+        - path: /PartType4/StellarFormationTime
+          name: Stellar Formation Time
+          description: ''
+          transformationExpression: x
+          groupId: null
+          dataType: float
+          children: []
+          decimalDigits: null
+        - path: /PartType4/Velocity
+          name: Velocity
+          description: ''
+          transformationExpression: x
+          groupId: null
+          dataType: vector3d
+          children:
+            - index: 0
+              name: Velocity - X
+              dataType: float
+            - index: 1
+              name: Velocity - Y
+              dataType: float
+            - index: 2
+              name: Velocity - Z
+              dataType: float
+          decimalDigits: null
+          totalChildCount: 3
+      labelColumnPath: null
+  globalAttributeDefs: []
+dashboardTemplate:
+  targetConcept: eagle_snapshot
+  templateId: autoTemplate_concept_Gac59edcb_8bca_4f07_947b_fc87b67ecd98.yaml
+  name: Template for z
+  rootElement:
+    elements:
+      - type: verticalGroup
+        elements:
+          - type: horizontalGroup
+            elements:
+              - type: canvasVolume
+                size:
+                  height: 600px
+                  width: 100%
+                layers:
+                  - type: volumePointsVelocity
+                    encodings:
+                      position: Coordinates
+                      velocity: Velocity
+                    table: $PartType0
+                    settings:
+                      velocityVectorOpacity: 0
+                      velocityVectorSize: 0
+                settings:
+                  syncGroupVolume: vol
+                  title: Gas
+              - type: canvasVolume
+                size:
+                  height: 600px
+                  width: 100%
+                layers:
+                  - type: volumePointsVelocity
+                    encodings:
+                      position: Coordinates
+                      velocity: Velocity
+                    table: $PartType4
+                    settings:
+                      velocityVectorSize: 0
+                      velocityVectorOpacity: 0
+                      pointSizeFactor: 3.6
+                settings:
+                  syncGroupVolume: vol
+                  title: Stars
+            size:
+              width: 100%
+            settings: {}
+        size:
+          width: 100%
+        settings:
+          title: Kinematics
+      - type: verticalGroup
+        elements:
+          - type: horizontalGroup
+            elements:
+              - type: canvasVolume
+                size:
+                  height: 600px
+                  width: 100%
+                layers:
+                  - type: volumePoints
+                    encodings:
+                      position: Coordinates
+                      color: log_Density
+                      size: log_Density
+                    table: $PartType0
+                    settings:
+                      colorRamp: defaultToBlack
+                      pointSizeFactor: 10
+                      sizeGammaFactor: 0.5
+                      scaleOpacityWithSize: false
+                      colorGammaFactor: 0.43
+                settings:
+                  syncGroupVolume: vol
+                  title: Gas density
+              - type: canvasVolume
+                size:
+                  height: 600px
+                  width: 100%
+                layers:
+                  - type: volumePoints
+                    encodings:
+                      position: Coordinates
+                      color: log_Metallicity
+                      size: log_Metallicity
+                    table: $PartType0
+                    settings:
+                      colorRamp: magma
+                      pointSizeFactor: 5.8
+                settings:
+                  syncGroupVolume: vol
+                  title: Gas metallicity
+            size:
+              width: 100%
+            settings: {}
+          - type: horizontalGroup
+            elements:
+              - type: canvas2D
+                size:
+                  height: 600px
+                  width: 100%
+                layers:
+                  - type: points
+                    encodings:
+                      x: log_Density
+                      'y': log_Temperature
+                      color: log_Metallicity
+                    table: $PartType0
+                    settings:
+                      pointSizeFactor: 2.2
+                      contourShow: false
+                      colorRamp: magma
+              - type: canvas2D
+                size:
+                  height: 600px
+                  width: 100%
+                layers:
+                  - type: points
+                    encodings:
+                      x: log_Density
+                      'y': Velocity_size
+                      color: log_Metallicity
+                    table: $PartType0
+                    settings:
+                      colorRamp: magma
+                      pointSizeFactor: 1.8
+            size:
+              width: 100%
+            settings: {}
+        size:
+          width: 100%
+        settings:
+          title: Gas
+      - type: verticalGroup
+        elements:
+          - type: horizontalGroup
+            elements:
+              - type: canvasVolume
+                size:
+                  height: 600px
+                  width: 100%
+                layers:
+                  - type: volumePoints
+                    encodings:
+                      position: Coordinates
+                      color: log_Metallicity
+                    table: $PartType4
+                    settings:
+                      colorGammaFactor: 0.7
+                      colorRamp: magma
+                settings:
+                  syncGroupVolume: vol
+              - type: canvasVolume
+                size:
+                  height: 600px
+                  width: 100%
+                layers:
+                  - type: volumePoints
+                    encodings:
+                      position: Coordinates
+                      color: StellarFormationTime
+                    table: $PartType4
+                    settings:
+                      colorRamp: rainbow
+                settings:
+                  syncGroupVolume: vol
+            size:
+              width: 100%
+            settings: {}
+          - type: horizontalGroup
+            elements:
+              - type: canvas2D
+                size:
+                  height: 600px
+                  width: 100%
+                layers:
+                  - type: points
+                    encodings:
+                      x: StellarFormationTime
+                      'y': log_BirthDensity
+                      color: log_Metallicity
+                    table: $PartType4
+                    settings:
+                      colorRamp: magma
+                      pointSizeFactor: 1
+                      colorGammaFactor: 0.7
+              - type: canvas2D
+                size:
+                  height: 600px
+                  width: 100%
+                layers:
+                  - type: points
+                    encodings:
+                      x: StellarFormationTime
+                      'y': Metallicity
+                      color: log_BirthDensity
+                    table: $PartType4
+                    settings:
+                      pointSizeFactor: 1.2
+                      colorRamp: default
+                      colorGammaFactor: 0.65
+            size:
+              width: 100%
+            settings: {}
+        size:
+          width: 100%
+        settings:
+          title: Stars
+    type: verticalGroup
+  computationRecipes:
+    $PartType0:
+      - id: log_Density
+        name: log Density
+        groupName: null
+        expression: log10(Density)
+        description: ''
+        unitName: ''
+        decimalDigits: null
+      - id: log_Metallicity
+        name: log Metallicity
+        groupName: null
+        expression: log10(max(1E-9,Metallicity))
+        description: ''
+        unitName: ''
+        decimalDigits: null
+      - id: log_Temperature
+        name: log Temperature
+        groupName: null
+        expression: log10(Temperature)
+        description: ''
+        unitName: ''
+        decimalDigits: null
+      - id: Velocity_size
+        name: Velocity size
+        groupName: null
+        expression: log10(vecSize(Velocity))
+        description: ''
+        unitName: ''
+        decimalDigits: null
+    $PartType4:
+      - id: log_Metallicity
+        name: log Metallicity
+        groupName: null
+        expression: log10(max(1E-6,Metallicity))
+        description: ''
+        unitName: ''
+        decimalDigits: null
+      - id: log_BirthDensity
+        name: log BirthDensity
+        groupName: null
+        expression: log10(BirthDensity)
+        description: ''
+        unitName: ''
+        decimalDigits: null

@@ -1,0 +1,118 @@
+.wrapper {
+    width: 1000px;
+    height: 80vh;
+    background: color-mix(in srgb, var(--color-sp1) 45%, var(--color-bg3));
+    //white-space: nowrap;
+
+    button {
+        cursor: pointer;
+        padding: 5px 10px;
+        margin: 3px 0 3px 0;
+        border: none;
+        background: var(--color-sp1);
+        color: var(--color-bg3);
+        font-weight: bold;
+        border-radius: 3px;
+        box-shadow: 0 0 5px var(--color-shadow2);
+        transition: transform 0.2s;
+
+        &:hover {
+            transform: scale(1.1);
+            background: color-mix(in srgb, var(--color-sp1) 60%, var(--color-fg));
+        }
+    }
+
+}
+
+.treeArea {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 400px;
+    height: 100%;
+    overflow: auto;
+    vertical-align: top;
+    white-space: nowrap;
+    border-right: 2px solid var(--color-bg3);
+}
+
+.sourceTreeLine,
+.sourceTreeLineAdded {
+    padding: 5px 0;
+}
+
+.sourceTreeLineAdded {
+    color: var(--color-sp2);
+}
+
+.treeItemIcon {
+    display: inline-block;
+    padding: 0 5px;
+    font-size: 16px;
+}
+
+.treeItemTechnicalData {
+    font-family: monospace;
+    font-size: 90%;
+    opacity: 60%;
+}
+
+
+.formArea {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 600px;
+    height: 100%;
+    overflow-y: auto;
+    vertical-align: top;
+}
+
+.formItemWrapper {
+    padding: 0 0;
+}
+
+.sectionTitle {
+    font-size: 110%;
+    border-bottom: 1px solid var(--color-sp1);
+    font-weight: bold;
+    padding: 0 0 3px 0;
+    margin: 30px 0 10px 0;
+}
+
+.listWrapper {
+    width: 100%;
+    box-shadow: 0 0 10px color-mix(in srgb, var(--color-fg) 30%, transparent) inset;
+}
+
+.listItem,
+.listItemSelected {
+    box-sizing: border-box;
+    padding: 5px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.listItemSelected {
+    background-color: color-mix(in srgb, var(--color-sp1) 65%, var(--color-bg3));
+    color: var(--color-sp2);
+}
+
+.addedItemLine {
+    box-sizing: border-box;
+    background: color-mix(in srgb, var(--color-sp1) 55%, var(--color-bg3));
+    padding: 10px;
+    margin: 15px 0;
+    position: relative;
+    cursor: pointer;
+
+    &:hover {
+        background: color-mix(in srgb, var(--color-sp1) 75%, var(--color-bg3));
+    }
+
+}
+
+.addedItemLineCloseButton {
+    position: absolute;
+    top: 3px;
+    right: 8px;
+    cursor: pointer;
+}

@@ -1,0 +1,98 @@
+
+targetConcept: survey
+
+name: A survey dashboard
+
+rootElement:
+  type: verticalGroup
+  elements:
+
+  - type: staticText
+    settings:
+      content: "Galaxy set, limited at magnitude=20. Total size: 1.7M galaxies."
+
+
+
+  - type: horizontalGroup
+    elements:
+
+    - type: categoricalFacet
+      size:
+        height: 700px
+        width: 300px
+      encodings:
+        categories: type
+      settings:
+        sortBy: alphabetical
+
+    - type: canvas2D
+      size:
+        height: 700px
+        width: 100%
+      settings:
+        aspectRatio11: false
+      layers:
+      - type: points
+        encodings:
+          x: al2000
+          y: de2000
+          color: logd25
+        settings:
+          colorGammaFactor: 0.25
+
+
+
+  - type: horizontalGroup
+    elements:
+
+
+    - type: canvas2D
+      size:
+        height: 500px
+        width: 40%
+      layers:
+      - type: points
+        encodings:
+          x: logr25
+          y: e_logd25
+          color: logd25
+
+    - type: canvas2D
+      size:
+        height: 500px
+        width: 60%
+      layers:
+      - type: points
+        encodings:
+          x: logd25
+          y: bt
+          color: logr25
+
+
+  - type: tabGroup
+    settings:
+      tabNames: 'Tab A;Tab B;Last tab'
+    elements:
+
+    - type: staticText
+      settings:
+        content: "Content of the first tab."
+
+    - type: staticText
+      settings:
+        content: "Content of the second tab."
+
+    - type: canvas2D
+      size:
+        height: 700px
+        width: 100%
+      settings:
+        aspectRatio11: false
+      layers:
+      - type: points
+        encodings:
+          x: al2000
+          y: de2000
+          color: logr25
+        settings:
+          colorGammaFactor: 0.25

@@ -1,0 +1,8 @@
+id: eagle_snapshot_ref_028
+name: "EAGLE snapshot 028"
+description: "z=0 snapshot from the EAGLE RefL0012N0188 simulation"
+dataSourceType: HDF5
+creationTimeStamp: 2024-01-05
+dataFile: eagle_snapshot_028_z000.hdf5
+conceptId: eagle_snapshot
+thumbnail: 'eagle_snapshot_ref_028.jpg'

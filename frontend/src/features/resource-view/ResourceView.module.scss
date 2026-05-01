@@ -1,0 +1,189 @@
+.wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%
+}
+
+
+
+
+.fixedPanel {
+    position: absolute;
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
+    width: var(--sidebar2-width);
+    height: 100%;
+    overflow-y: auto;
+    background-color: var(--color-bg2);
+
+    background: linear-gradient(to right,
+            color-mix(in srgb, var(--color-sp1) 25%, var(--color-bg2)),
+            color-mix(in srgb, var(--color-sp1) 15%, var(--color-bg2)));
+
+    box-shadow: 0 0 25px color-mix(in srgb, var(--color-bg3) 50%, transparent);
+}
+
+.filterPanel {
+    width: 100%;
+    height: calc(100% - 80px);
+    overflow-y: auto;
+}
+
+.actionsPanel {
+    box-sizing: border-box;
+    padding: 20px;
+    width: 100%;
+    height: 80px;
+    background: color-mix(in srgb, var(--color-bg3) 20%, transparent);
+}
+
+
+.body {
+    position: absolute;
+    box-sizing: border-box;
+    padding: var(--dashboard-hmargin);
+    top: 0;
+    left: var(--sidebar2-width);
+    width: calc(100% - var(--sidebar2-width));
+    height: 100%;
+    overflow-y: auto;
+
+    h2 {
+        padding-bottom: 2px;
+        border-bottom: 2px solid color-mix(in srgb, var(--color-sp1) 50%, transparent);
+    }
+}
+
+.linkSectionTitle {
+    display: inline-block;
+    width: 150px;
+    padding: 15px;
+    text-align: right;
+    font-size: 120%;
+    box-sizing: border-box;
+    font-weight: 100;
+    vertical-align: top;
+    padding-top: 40px;
+}
+
+.linkSectionBody {
+    display: inline-block;
+    width: calc(100% - 150px);
+    // border-left: 1px solid rgb(160, 160, 160);
+    box-sizing: border-box;
+    margin: 5px 0;
+}
+
+.linkTile {
+    position: relative;
+    display: inline-block;
+    width: 250px;
+    height: 70px;
+    cursor: pointer;
+    padding: 10px;
+    margin: 10px;
+    background-color: var(--color-bg2);
+    border-radius: 10px;
+    border: 1px solid color-mix(in srgb, var(--color-sp1) 50%, var(--color-bg2));
+    box-shadow: 0 0 15px var(--color-shadow2);
+    line-height: 1.25;
+
+    transition: transform 0.2s;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
+.linkConceptName {
+    font-weight: 100;
+}
+
+.linkResourceName {
+    font-weight: bold;
+    // white-space: nowrap;
+    // width: 100%;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+}
+
+.linkResourceDescr {
+    white-space: nowrap;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+}
+
+.linkHoverButton {
+    display: none;
+    position: absolute;
+    top: 5px;
+    right: -13px;
+    box-sizing: border-box;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background-color: color-mix(in srgb, var(--color-sp1) 50%, var(--color-bg2));
+    text-align: center;
+    line-height: 26px;
+    font-size: 12px;
+}
+
+.linkTile:hover {
+    .linkHoverButton {
+        display: inline;
+    }
+}
+
+.widget {
+    width: 1100px;
+    height: 700px;
+    margin-top: 30px;
+    margin-left: 30px;
+    background-color: var(--color-bg2);
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px var(--color-shadow2);
+}
+
+.zoomBox {
+    position: absolute;
+    box-sizing: border-box;
+    bottom: 80px;
+    left: 0;
+    background-color: var(--color-bg3);
+    width: 220px;
+    height: 40px;
+    padding: 10px;
+}
+
+.addChartButton {
+    display: inline-block;
+    cursor: pointer;
+    font-size: 60px;
+    box-sizing: border-box;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    ;
+    text-align: center;
+    line-height: 80px;
+    margin-left: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: color-mix(in srgb, var(--color-sp1) 70%, transparent);
+    background-color: color-mix(in srgb, var(--color-sp1) 20%, transparent);
+
+    transition: transform 0.2s;
+
+    &:hover {
+        background-color: color-mix(in srgb, var(--color-sp1) 40%, transparent);
+        transform: scale(1.2);
+    }
+}
+
+.issueError {
+    padding: 20px 0;
+    margin: 10px 0;
+    background-color: rgba(255, 0, 0, 0.25);
+}

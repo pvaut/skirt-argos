@@ -1,0 +1,160 @@
+conceptDefinition:
+  isLocal: true
+  isTable: false
+  id: hyperleda
+  name: Hyperleda
+  namePlural: ''
+  description: >-
+    [HyperLEDA](http://atlas.obs-hp.fr/hyperleda/) is a database and a
+    collection of tools to study the physics of galaxies and cosmology.
+  tableConcepts:
+    - path: /table
+      nameSingle: table
+      namePlural: Galaxies
+      description: ''
+      propertyGroups: []
+      properties:
+        - path: /table/al2000
+          name: Al2000
+          description: ''
+          transformationExpression: x
+          groupId: null
+          dataType: float
+          children: []
+        - path: /table/de2000
+          name: De2000
+          description: ''
+          transformationExpression: x
+          groupId: null
+          dataType: float
+          children: []
+        - path: /table/type
+          name: Type
+          description: ''
+          transformationExpression: x
+          groupId: null
+          dataType: categorical
+          children: []
+        - path: /table/logd25
+          name: Logd25
+          description: ''
+          transformationExpression: x
+          groupId: null
+          dataType: float
+          children: []
+        - path: /table/bt
+          name: Bt
+          description: ''
+          transformationExpression: x
+          groupId: null
+          dataType: float
+          children: []
+        - path: /table/it
+          name: It
+          description: ''
+          transformationExpression: x
+          groupId: null
+          dataType: float
+          children: []
+        - path: /table/pgc
+          name: Pgc
+          description: ''
+          transformationExpression: x
+          groupId: null
+          dataType: float
+          children: []
+        - path: /table/objname
+          name: Objname
+          description: ''
+          transformationExpression: x
+          groupId: null
+          dataType: string
+          children: []
+      labelColumnPath: /table/objname
+  globalAttributeDefs: []
+  serverVersion: 1
+dashboardTemplate:
+  targetConcept: hyperleda
+  templateId: autoTemplate_concept_e429811f_1c2f_440a_8a5b_cea8a2736733.yaml
+  name: Template for Hyperleda
+  rootElement:
+    elements:
+      - type: horizontalGroup
+        elements:
+          - type: canvas2D
+            size:
+              width: 60%
+              height: 600px
+            layers:
+              - type: points
+                encodings:
+                  x: al2000
+                  'y': de2000
+                  color: logd25
+                table: $table
+                settings:
+                  pointSizeFactor: 2
+            settings: {}
+          - type: categoricalFacet
+            size:
+              width: 40%
+              height: 600px
+            encodings:
+              categories: type
+            table: $table
+            settings: {}
+        size:
+          width: 100%
+        settings: {}
+      - type: horizontalGroup
+        elements:
+          - type: tableView
+            size:
+              width: 60%
+              height: 600px
+            table: $table
+            encodings: {}
+            settings:
+              columns:
+                - id: objname
+                  width: 220
+                - id: pgc
+                  width: 80
+                - id: al2000
+                  width: 150
+                - id: de2000
+                  width: 150
+                - id: type
+                  width: 70
+                - id: logd25
+                  width: 100
+                - id: bt
+                  width: 100
+                - id: it
+                  width: 100
+          - type: canvas2D
+            size:
+              width: 40%
+              height: 600px
+            layers:
+              - type: points
+                encodings:
+                  x: bt
+                  'y': it
+                table: $table
+            settings: {}
+        size:
+          width: 100%
+        settings: {}
+    type: verticalGroup
+  actions:
+    - id: 70046717-de5f-47ab-97de-93d9eb8196b4
+      name: Open in Hyperleda
+      targetTableId: $table
+      actionDef: >-
+        theUrl = "http://atlas.obs-hp.fr/hyperleda/ledacat.cgi?o=" + objname;
+
+        userConfirm("Confirmation", "Open galaxy " + objname + " in the
+        Hyperleda web app?")
+           ? openUrl(theUrl)
+           : abort()

@@ -1,0 +1,549 @@
+conceptDefinition:
+  isLocal: true
+  isTable: false
+  id: tsa_galaxy
+  name: TSA galaxy
+  namePlural: ''
+  description: ''
+  tableConcepts:
+    - path: /pixels
+      nameSingle: pixels
+      namePlural: pixels
+      description: ''
+      propertyGroups:
+        - id: G61eb9dc7_ece5_4883_8c7d_67c2a450366b
+          name: Physical properties
+        - id: G11bcd31d_35ec_4996_a5d9_36a723b73706
+          name: Imaging
+        - id: G4c4160fc_f3cb_4cab_adf1_9b86dd5f5c99
+          name: Coordinates
+      properties:
+        - path: /pixels/x
+          name: X
+          description: ''
+          transformationExpression: x
+          groupId: G4c4160fc_f3cb_4cab_adf1_9b86dd5f5c99
+          dataType: float
+          children: []
+          decimalDigits: null
+          unitName: pc
+        - path: /pixels/y
+          name: 'Y'
+          description: ''
+          transformationExpression: x
+          groupId: G4c4160fc_f3cb_4cab_adf1_9b86dd5f5c99
+          dataType: float
+          children: []
+          decimalDigits: null
+          unitName: pc
+        - path: /pixels/stellarmass
+          name: Stellarmass
+          description: ''
+          transformationExpression: x
+          groupId: G61eb9dc7_ece5_4883_8c7d_67c2a450366b
+          dataType: float
+          children: []
+          decimalDigits: null
+        - path: /pixels/dustmass
+          name: Dustmass
+          description: ''
+          transformationExpression: x
+          groupId: G61eb9dc7_ece5_4883_8c7d_67c2a450366b
+          dataType: float
+          children: []
+          decimalDigits: null
+        - path: /pixels/stellarmetallicity
+          name: Stellarmetallicity
+          description: ''
+          transformationExpression: x
+          groupId: G61eb9dc7_ece5_4883_8c7d_67c2a450366b
+          dataType: float
+          children: []
+          decimalDigits: null
+        - path: /pixels/stellarage
+          name: Stellarage
+          description: ''
+          transformationExpression: x
+          groupId: G61eb9dc7_ece5_4883_8c7d_67c2a450366b
+          dataType: float
+          children: []
+          decimalDigits: null
+        - path: /pixels/GALEX_FUV
+          name: GALEX FUV
+          description: ''
+          transformationExpression: x
+          groupId: G11bcd31d_35ec_4996_a5d9_36a723b73706
+          dataType: float
+          children: []
+          decimalDigits: null
+        - path: /pixels/GALEX_NUV
+          name: GALEX NUV
+          description: ''
+          transformationExpression: x
+          groupId: G11bcd31d_35ec_4996_a5d9_36a723b73706
+          dataType: float
+          children: []
+          decimalDigits: null
+        - path: /pixels/LSST_u
+          name: LSST u
+          description: ''
+          transformationExpression: x
+          groupId: G11bcd31d_35ec_4996_a5d9_36a723b73706
+          dataType: float
+          children: []
+          decimalDigits: null
+        - path: /pixels/LSST_g
+          name: LSST g
+          description: ''
+          transformationExpression: x
+          groupId: G11bcd31d_35ec_4996_a5d9_36a723b73706
+          dataType: float
+          children: []
+          decimalDigits: null
+        - path: /pixels/LSST_r
+          name: LSST r
+          description: ''
+          transformationExpression: x
+          groupId: G11bcd31d_35ec_4996_a5d9_36a723b73706
+          dataType: float
+          children: []
+          decimalDigits: null
+        - path: /pixels/LSST_i
+          name: LSST i
+          description: ''
+          transformationExpression: x
+          groupId: G11bcd31d_35ec_4996_a5d9_36a723b73706
+          dataType: float
+          children: []
+          decimalDigits: null
+        - path: /pixels/LSST_z
+          name: LSST z
+          description: ''
+          transformationExpression: x
+          groupId: G11bcd31d_35ec_4996_a5d9_36a723b73706
+          dataType: float
+          children: []
+          decimalDigits: null
+        - path: /pixels/_2MASS_J
+          name: ' 2 MASS J'
+          description: ''
+          transformationExpression: x
+          groupId: G11bcd31d_35ec_4996_a5d9_36a723b73706
+          dataType: float
+          children: []
+          decimalDigits: null
+        - path: /pixels/_2MASS_H
+          name: ' 2 MASS H'
+          description: ''
+          transformationExpression: x
+          groupId: G11bcd31d_35ec_4996_a5d9_36a723b73706
+          dataType: float
+          children: []
+          decimalDigits: null
+        - path: /pixels/_2MASS_Ks
+          name: ' 2 MASS Ks'
+          description: ''
+          transformationExpression: x
+          groupId: G11bcd31d_35ec_4996_a5d9_36a723b73706
+          dataType: float
+          children: []
+          decimalDigits: null
+        - path: /pixels/WISE_W1
+          name: WISE W1
+          description: ''
+          transformationExpression: x
+          groupId: G11bcd31d_35ec_4996_a5d9_36a723b73706
+          dataType: float
+          children: []
+          decimalDigits: null
+        - path: /pixels/WISE_W2
+          name: WISE W2
+          description: ''
+          transformationExpression: x
+          groupId: G11bcd31d_35ec_4996_a5d9_36a723b73706
+          dataType: float
+          children: []
+          decimalDigits: null
+      labelColumnPath: null
+  globalAttributeDefs:
+    - identifier: avg_galex_fuv
+      expression: columnMean($pixels_GALEX_FUV)
+    - identifier: avg_galex_nuv
+      expression: columnMean($pixels_GALEX_NUV)
+    - identifier: avg_lsst_g
+      expression: columnMean($pixels_LSST_g)
+    - identifier: avg_lsst_i
+      expression: columnMean($pixels_LSST_i)
+    - identifier: avg_lsst_r
+      expression: columnMean($pixels_LSST_r)
+    - identifier: avg_lsst_u
+      expression: columnMean($pixels_LSST_u)
+    - identifier: avg_lsst_z
+      expression: columnMean($pixels_LSST_z)
+    - identifier: avg_lsst_z
+      expression: columnMean($pixels_LSST_z)
+    - identifier: avg_wize_w1
+      expression: columnMean($pixels_WISE_W1)
+    - identifier: avg_wize_w2
+      expression: columnMean($pixels_WISE_W2)
+    - identifier: avg_2mass_h
+      expression: columnMean($pixels__2MASS_H)
+    - identifier: avg_2mass_j
+      expression: columnMean($pixels__2MASS_J)
+    - identifier: avg_2mass_ks
+      expression: columnMean($pixels__2MASS_Ks)
+  serverVersion: 1
+dashboardTemplate:
+  targetConcept: tsa_galaxy
+  templateId: autoTemplate_concept_Ged15b26c_38ff_43b9_800f_6bec2a774716.yaml
+  name: Template for TSA galaxy
+  rootElement:
+    elements:
+      - type: verticalGroup
+        elements:
+          - type: horizontalGroup
+            elements:
+              - type: verticalGroup
+                elements:
+                  - type: canvas2D
+                    size:
+                      width: 100%
+                      height: 550px
+                    layers:
+                      - type: BitmapRGB
+                        encodings:
+                          x: x
+                          'y': 'y'
+                          colorR: _2MASS_J
+                          colorG: LSST_g
+                          colorB: LSST_u
+                        table: $pixels
+                        settings:
+                          stretchFactor: 6
+                          normPerColor: common
+                          scalingFactorB: 10
+                          scalingFactorR: 2.8
+                          scalingFactorG: 5.6
+                    settings:
+                      aspectRatio11: true
+                      syncGroupXAxis: x
+                      syncGroupYAxis: 'y'
+                  - type: canvas2D
+                    size:
+                      width: 100%
+                      height: 250px
+                    layers:
+                      - type: histogram
+                        encodings:
+                          values: log_LSST_g
+                        table: $pixels
+                        settings:
+                          yScaleType: count
+                    settings: {}
+                size:
+                  width: 150%
+                settings:
+                  title: ''
+              - type: verticalGroup
+                elements:
+                  - type: canvas2D
+                    size:
+                      width: 100%
+                      height: 400px
+                    layers:
+                      - type: points
+                        encodings:
+                          x: x
+                          'y': 'y'
+                          color: LSST_u
+                        table: $pixels
+                        settings:
+                          colorRamp: magmaToBlack
+                          colorGammaFactor: 0.15
+                    settings:
+                      aspectRatio11: true
+                      syncGroupXAxis: x
+                      syncGroupYAxis: 'y'
+                      hideXYAxes: true
+                  - type: canvas2D
+                    size:
+                      width: 100%
+                      height: 400px
+                    layers:
+                      - type: points
+                        encodings:
+                          x: x
+                          'y': 'y'
+                          color: LSST_g
+                        table: $pixels
+                        settings:
+                          colorRamp: magmaToBlack
+                          colorGammaFactor: 0.2
+                    settings:
+                      aspectRatio11: true
+                      syncGroupXAxis: x
+                      syncGroupYAxis: 'y'
+                      hideXYAxes: true
+                size:
+                  width: 100%
+                settings: {}
+              - type: verticalGroup
+                elements:
+                  - type: canvas2D
+                    size:
+                      width: 100%
+                      height: 400px
+                    layers:
+                      - type: points
+                        encodings:
+                          x: x
+                          'y': 'y'
+                          color: _2MASS_J
+                        table: $pixels
+                        settings:
+                          colorRamp: magmaToBlack
+                          colorGammaFactor: 0.2
+                    settings:
+                      syncGroupXAxis: x
+                      syncGroupYAxis: 'y'
+                      hideXYAxes: true
+                  - type: canvas2D
+                    size:
+                      width: 100%
+                      height: 400px
+                    layers:
+                      - type: points
+                        encodings:
+                          x: x
+                          'y': 'y'
+                          color: WISE_W2
+                        table: $pixels
+                        settings:
+                          colorRamp: magmaToBlack
+                          colorGammaFactor: 0.2
+                    settings:
+                      syncGroupXAxis: x
+                      syncGroupYAxis: 'y'
+                      hideXYAxes: true
+                size:
+                  width: 100%
+                settings: {}
+            size:
+              width: 100%
+            settings: {}
+        size:
+          width: 100%
+        settings:
+          title: Luminosities
+      - type: verticalGroup
+        elements:
+          - type: horizontalGroup
+            elements:
+              - type: canvas2D
+                size:
+                  width: 100%
+                  height: 500px
+                layers:
+                  - type: points
+                    encodings:
+                      x: log_LSST_i
+                      'y': log_GALEX_NUV
+                      color: log_LSST_g
+                    table: $pixels
+                    settings:
+                      renderType: opaque
+                      pointSizeFactor: 1.8
+                      opacity: 0.3
+                settings: {}
+              - type: canvas2D
+                size:
+                  width: 100%
+                  height: 500px
+                layers:
+                  - type: points
+                    encodings:
+                      x: log_LSST_g
+                      'y': log_LSST_r
+                    table: $pixels
+                    settings:
+                      pointSizeFactor: 1.8
+                settings: {}
+              - type: canvas2D
+                size:
+                  width: 100%
+                  height: 500px
+                layers:
+                  - type: points
+                    encodings:
+                      x: U_V1
+                      'y': V_J1
+                      color: log_LSST_g
+                    table: $pixels
+                    settings:
+                      pointSizeFactor: 1.8
+                      renderType: opaque
+                settings: {}
+            size:
+              width: 100%
+            settings: {}
+        size:
+          width: 100%
+        settings:
+          title: Luminosity correlations
+      - type: verticalGroup
+        elements:
+          - type: horizontalGroup
+            elements:
+              - type: canvas2D
+                size:
+                  width: 100%
+                  height: 500px
+                layers:
+                  - type: points
+                    encodings:
+                      x: x
+                      'y': 'y'
+                      color: stellarmass
+                    table: $pixels
+                    settings:
+                      colorRamp: defaultToBlack
+                      colorGammaFactor: 0.08
+                      colorRangeMax: 1
+                settings:
+                  aspectRatio11: true
+                  syncGroupXAxis: x
+                  syncGroupYAxis: 'y'
+              - type: canvas2D
+                size:
+                  width: 100%
+                  height: 500px
+                layers:
+                  - type: points
+                    encodings:
+                      x: x
+                      'y': 'y'
+                      color: dustmass
+                    table: $pixels
+                    settings:
+                      colorRamp: defaultToBlack
+                      colorGammaFactor: 0.08
+                settings:
+                  aspectRatio11: true
+                  syncGroupXAxis: x
+                  syncGroupYAxis: 'y'
+              - type: canvas2D
+                size:
+                  width: 100%
+                  height: 500px
+                layers:
+                  - type: points
+                    encodings:
+                      x: x
+                      'y': 'y'
+                      color: stellarmetallicity
+                    table: $pixels
+                    settings:
+                      colorRamp: redBlue1
+                      colorGammaFactor: 0.2
+                settings:
+                  aspectRatio11: true
+                  syncGroupXAxis: x
+                  syncGroupYAxis: 'y'
+            size:
+              width: 100%
+            settings: {}
+          - type: horizontalGroup
+            elements:
+              - type: canvas2D
+                size:
+                  width: 100%
+                  height: 500px
+                layers:
+                  - type: points
+                    encodings:
+                      x: x
+                      'y': 'y'
+                      color: stellarage
+                    table: $pixels
+                    settings:
+                      colorRamp: greenOrange1
+                settings:
+                  syncGroupXAxis: x
+                  syncGroupYAxis: 'y'
+                  aspectRatio11: true
+              - type: canvas2D
+                size:
+                  width: 100%
+                  height: 500px
+                layers:
+                  - type: points
+                    encodings:
+                      x: log_stellarmass
+                      'y': log_LSST_g
+                      color: log_dustmass
+                    table: $pixels
+                settings: {}
+            size:
+              width: 100%
+            settings: {}
+        size:
+          width: 100%
+        settings:
+          title: Physical Properties
+    type: verticalGroup
+  computationRecipes:
+    $pixels:
+      - id: log_GALEX_NUV
+        name: log GALEX NUV
+        groupName: null
+        expression: log10(trimRange(GALEX_NUV, avg_galex_nuv/5, 1E99))
+      - id: log_LSST_u
+        name: log LSST u
+        groupName: null
+        expression: log10(trimRange(LSST_u, avg_lsst_u/5, 1E99))
+      - id: log_LSST_g
+        name: log LSST g
+        groupName: null
+        expression: log10(trimRange(LSST_g, avg_lsst_g/5, 1E99))
+        description: ''
+        unitName: ''
+      - id: log_LSST_r
+        name: log LSST r
+        groupName: null
+        expression: log10(trimRange(LSST_r, avg_lsst_r/5, 1E99))
+      - id: log_LSST_i
+        name: log LSST i
+        groupName: null
+        expression: log10(trimRange(LSST_i, avg_lsst_i/5, 1E99))
+      - id: log_2MASS_J
+        name: log 2MASS J
+        groupName: null
+        expression: log10(trimRange(_2MASS_J, avg_2mass_j/5, 1E99))
+      - id: log_WISE_W1
+        name: log WISE W1
+        groupName: null
+        expression: log10(trimRange(WISE_W1, avg_wize_w1/5, 1E99))
+      - id: log_WISE_W2
+        name: log WISE W2
+        groupName: null
+        expression: log10(trimRange(WISE_W2, avg_wize_w2/5, 1E99))
+      - id: U_V1
+        name: U-V
+        groupName: null
+        expression: '-2.5*(log_LSST_u-log_LSST_g)'
+      - id: V_J1
+        name: V-J
+        groupName: null
+        expression: '-2.5*(log_LSST_g-log_2MASS_J)'
+      - id: log_stellarmass
+        name: log stellarmass
+        groupName: null
+        expression: log10(stellarmass)
+        description: ''
+        unitName: ''
+      - id: log_dustmass
+        name: log dustmass
+        groupName: null
+        expression: log10(dustmass)
+        description: ''
+        unitName: ''

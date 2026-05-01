@@ -1,0 +1,146 @@
+.wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+
+.pagerWrapper {
+    display: inline-block;
+    width: 170px;
+    height: 40px;
+    line-height: 40px;
+    vertical-align: top;
+    padding-left: 5px;
+    color: var(--color-sp1);
+    font-weight: bold;
+    //background-color: color-mix(in srgb, var(--color-fg) 20%, transparent);
+
+
+    button {
+        display: block;
+        background-color: transparent;
+        padding: 0;
+        margin: 0;
+        width: 15px;
+        height: 20px;
+        line-height: 20px;
+        font-size: 20px;
+        border: none;
+        cursor: pointer;
+        //opacity: 0.6;
+        color: var(--color-sp1);
+
+        &:hover {
+            opacity: 1 !important;
+            //background-color: color-mix(in srgb, var(--color-fg) 25%, transparent);
+        }
+    }
+}
+
+.pagerText {
+    display: inline-block;
+    padding-left: 5px;
+    height: 40px;
+    line-height: 40px;
+    vertical-align: top;
+}
+
+
+
+.title {
+    box-sizing: border-box;
+    display: inline-block;
+    width: calc(100% - 200px);
+    text-align: center;
+    font-size: 18px;
+    //color: var(--color-sp1);
+    padding: 10px 0;
+}
+
+
+.contentWrapper {
+    width: 100%;
+    height: calc(100% - 40px);
+    overflow-y: auto;
+    overflow-x: hidden;
+
+}
+
+.item,
+.itemFilterActive {
+    position: relative;
+    width: 100%;
+    height: 35px;
+    box-sizing: border-box;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+}
+
+.itemFilterActive {
+    background-color: color-mix(in srgb, var(--color-sp2) 15%, transparent);
+
+    &:hover {
+        background-color: color-mix(in srgb, var(--color-sp2) 25%, transparent);
+    }
+}
+
+.barBox {
+    position: absolute;
+    top: 0;
+    left: 60px;
+    width: calc(100% - 60px);
+    height: 35px;
+    box-sizing: border-box;
+    //background-color:  rgba(255,0,255,0.2);
+}
+
+
+.totalBar {
+    position: absolute;
+    top: 5px;
+    height: 24px;
+    background: linear-gradient(to right,
+            color-mix(in srgb, var(--color-fg) 5%, var(--color-bg3)),
+            color-mix(in srgb, var(--color-fg) 20%, var(--color-bg3)));
+}
+
+.selectedBar {
+    position: absolute;
+    top: 5px;
+    height: 24px;
+    //background-color:  color-mix(in srgb, var(  --color-sp1) 35%, transparent);
+    background: linear-gradient(to right,
+            color-mix(in srgb, var(--color-sp1) 15%, var(--color-bg3)),
+            color-mix(in srgb, var(--color-sp1) 55%, var(--color-bg3)));
+}
+
+.label {
+    position: absolute;
+    left: 65px;
+    top: 8px;
+    height: 24px;
+}
+
+.count {
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 52px;
+    height: 24px;
+    text-align: right;
+    font-weight: lighter;
+    color: var(--color-sp1);
+}
+
+.filterIndication {
+    position: absolute;
+    left: 0;
+    top: 1px;
+    width: 4px;
+    height: 32px;
+    background-color: var(--color-sp2);
+}

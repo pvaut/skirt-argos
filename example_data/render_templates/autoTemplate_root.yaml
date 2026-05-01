@@ -1,0 +1,12 @@
+name: Template for root
+rootElement:
+  elements:
+  - content: Static text content
+    settings:
+      content: Lorem ipsum
+    size:
+      width: 100%
+    type: staticText
+  type: verticalGroup
+targetConcept: root
+templateId: autoTemplate_root.yaml

@@ -1,0 +1,8 @@
+id: tng300_snapshot_099_subsampled
+name: "TNG300 Snapshot z=0 (subsampled)"
+description: "5M subsampled subhalos from the TNG300 099 snapshot"
+dataSourceType: HDF5
+creationTimeStamp: 2024-01-03
+dataFile: TNG_snapshot_099_subsampled.hdf5
+conceptId: tng_snapshot
+thumbnail: 'tng_snapshot_2.jpg'

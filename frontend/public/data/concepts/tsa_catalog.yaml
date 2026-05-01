@@ -1,0 +1,700 @@
+conceptDefinition:
+  isLocal: true
+  isTable: false
+  id: tsa_catalog
+  name: TSA catalog
+  namePlural: ''
+  description: ''
+  tableConcepts:
+    - path: /table
+      nameSingle: galaxy
+      namePlural: Galaxies
+      description: ''
+      propertyGroups:
+        - id: props_phys
+          name: Physical properties
+        - id: props_abs_mags
+          name: Absolute Magnitudes
+        - id: props_abs_mags_dustfree
+          name: Absolute Magnitudes (dust-free)
+      properties:
+        - path: /table/subhalo_id
+          name: Subhalo id
+          description: ''
+          transformationExpression: x
+          groupId: null
+          dataType: string
+          children: []
+          decimalDigits: null
+        - path: /table/stellar_mass
+          name: Stellar mass
+          description: ''
+          unitName: M Msun
+          transformationExpression: x/1E6
+          groupId: props_phys
+          dataType: float
+          children: []
+          decimalDigits: 1
+        - path: /table/gas_mass
+          name: Gas mass
+          unitName: M Msun
+          description: ''
+          transformationExpression: x/1E6
+          groupId: props_phys
+          dataType: float
+          children: []
+          decimalDigits: 1
+        - path: /table/dark_matter_mass
+          name: Dark matter mass
+          description: ''
+          unitName: M Msun
+          transformationExpression: x/1E6
+          groupId: props_phys
+          dataType: float
+          children: []
+          decimalDigits: 0
+        - path: /table/SFR
+          name: SFR
+          description: ''
+          unitName: Msun/yr
+          transformationExpression: x
+          groupId: props_phys
+          dataType: float
+          children: []
+          decimalDigits: 6
+        - path: /table/stellar_half_mass_radius
+          name: Stellar half mass radius
+          description: ''
+          unitName: kpc
+          transformationExpression: x
+          groupId: props_phys
+          dataType: float
+          children: []
+          decimalDigits: 5
+        - path: /table/total_dust_mass
+          name: Total dust mass
+          description: ''
+          transformationExpression: x/1E6
+          groupId: props_phys
+          dataType: float
+          children: []
+          decimalDigits: 2
+          unitName: M Msun
+        - path: /table/inclination
+          name: Inclination
+          description: ''
+          transformationExpression: x
+          groupId: props_phys
+          dataType: float
+          children: []
+          decimalDigits: 1
+          unitName: degrees
+        - path: /table/abs_mag_GALEX_FUV
+          name: Mag GALEX FUV
+          description: ''
+          transformationExpression: x
+          groupId: props_abs_mags
+          dataType: float
+          children: []
+          decimalDigits: 2
+          unitName: mag
+        - path: /table/abs_mag_GALEX_NUV
+          name: Mag GALEX NUV
+          description: ''
+          transformationExpression: x
+          groupId: props_abs_mags
+          dataType: float
+          children: []
+          decimalDigits: 2
+          unitName: mag
+        - path: /table/abs_mag_LSST_u
+          name: Mag LSST u
+          description: ''
+          transformationExpression: x
+          groupId: props_abs_mags
+          dataType: float
+          children: []
+          decimalDigits: 2
+          unitName: mag
+        - path: /table/abs_mag_LSST_g
+          name: Mag LSST g
+          description: ''
+          transformationExpression: x
+          groupId: props_abs_mags
+          dataType: float
+          children: []
+          decimalDigits: 2
+          unitName: mag
+        - path: /table/abs_mag_LSST_r
+          name: Mag LSST r
+          description: ''
+          transformationExpression: x
+          groupId: props_abs_mags
+          dataType: float
+          children: []
+          decimalDigits: 2
+          unitName: mag
+        - path: /table/abs_mag_LSST_i
+          name: Mag LSST i
+          description: ''
+          transformationExpression: x
+          groupId: props_abs_mags
+          dataType: float
+          children: []
+          decimalDigits: 2
+          unitName: mag
+        - path: /table/abs_mag_LSST_z
+          name: Mag LSST z
+          description: ''
+          transformationExpression: x
+          groupId: props_abs_mags
+          dataType: float
+          children: []
+          decimalDigits: 2
+          unitName: mag
+        - path: /table/abs_mag_2MASS_J
+          name: Mag 2MASS J
+          description: ''
+          transformationExpression: x
+          groupId: props_abs_mags
+          dataType: float
+          children: []
+          decimalDigits: 2
+          unitName: mag
+        - path: /table/abs_mag_2MASS_H
+          name: Mag 2MASS H
+          description: ''
+          transformationExpression: x
+          groupId: props_abs_mags
+          dataType: float
+          children: []
+          decimalDigits: 2
+          unitName: mag
+        - path: /table/abs_mag_2MASS_Ks
+          name: Mag 2MASS Ks
+          description: ''
+          transformationExpression: x
+          groupId: props_abs_mags
+          dataType: float
+          children: []
+          decimalDigits: 2
+          unitName: mag
+        - path: /table/abs_mag_WISE_W1
+          name: Mag WISE W1
+          description: ''
+          transformationExpression: x
+          groupId: props_abs_mags
+          dataType: float
+          children: []
+          decimalDigits: 2
+          unitName: mag
+        - path: /table/abs_mag_WISE_W2
+          name: Mag WISE W2
+          description: ''
+          transformationExpression: x
+          groupId: props_abs_mags
+          dataType: float
+          children: []
+          decimalDigits: 2
+          unitName: mag
+        - path: /table/dustfree_abs_mag_LSST_u
+          name: Dustfree abs mag LSST u
+          description: ''
+          transformationExpression: x
+          groupId: props_abs_mags_dustfree
+          dataType: float
+          children: []
+          decimalDigits: 2
+          unitName: mag
+        - path: /table/dustfree_abs_mag_LSST_g
+          name: Dustfree abs mag LSST g
+          description: ''
+          transformationExpression: x
+          groupId: props_abs_mags_dustfree
+          dataType: float
+          children: []
+          decimalDigits: 2
+          unitName: mag
+        - path: /table/dustfree_abs_mag_2MASS_J
+          name: Dustfree abs mag 2 MASS J
+          description: ''
+          transformationExpression: x
+          groupId: props_abs_mags_dustfree
+          dataType: float
+          children: []
+          decimalDigits: 2
+          unitName: mag
+      labelColumnPath: /table/subhalo_id
+  globalAttributeDefs: []
+  serverVersion: 1
+dashboardTemplate:
+  targetConcept: tsa_catalog
+  templateId: autoTemplate_concept_G1393e616_d16c_4427_a8b9_3a90f0e11a3a.yaml
+  name: Template for TSA catalog
+  rootElement:
+    elements:
+      - type: verticalGroup
+        elements:
+          - type: horizontalGroup
+            elements:
+              - type: canvas2D
+                size:
+                  width: 100%
+                  height: 450px
+                layers:
+                  - type: points
+                    encodings:
+                      x: abs_mag_LSST_u
+                      'y': abs_mag_GALEX_FUV
+                    table: $table
+                    settings:
+                      renderType: luminous
+                      opacity: 0.7
+                      contourShow: false
+                settings: {}
+              - type: canvas2D
+                size:
+                  width: 100%
+                  height: 450px
+                layers:
+                  - type: points
+                    encodings:
+                      x: abs_mag_LSST_u
+                      'y': abs_mag_LSST_i
+                    table: $table
+                    settings:
+                      renderType: luminous
+                      opacity: 0.6
+                settings: {}
+              - type: canvas2D
+                size:
+                  width: 100%
+                  height: 450px
+                layers:
+                  - type: points
+                    encodings:
+                      x: abs_mag_LSST_u
+                      'y': abs_mag_2MASS_J
+                    table: $table
+                    settings:
+                      renderType: luminous
+                      pointSizeFactor: 4
+                      opacity: 0.6
+                settings: {}
+            size:
+              width: 100%
+            settings: {}
+          - type: horizontalGroup
+            elements:
+              - type: canvas2D
+                size:
+                  width: 100%
+                  height: 550px
+                layers:
+                  - type: stripplot
+                    encodings:
+                      color: abs_mag_LSST_u
+                    settings:
+                      columns:
+                        - id: rel_FUV
+                        - id: rel_NUV
+                        - id: rel_LSST_U
+                        - id: rel_LSST_G
+                        - id: rel_LSST_R
+                        - id: rel_LSST_I
+                        - id: rel_LSST_Z
+                        - id: rel_2MASS_J
+                        - id: rel_2MASS_H
+                        - id: rel_2MASS_Ks
+                        - id: rel_WISE_W1
+                        - id: rel_WISE_W2
+                      renderType: opaque
+                      pointSizeFactor: 2.4
+                      renderTypeLines: translucent
+                      colorRamp: magma
+                      colorGammaFactor: 0.58
+                    table: $table
+                settings:
+                  title: Absolute Magnitudes
+              - type: canvas2D
+                size:
+                  width: 100%
+                  height: 550px
+                layers:
+                  - type: points
+                    encodings:
+                      x: G_J_mag
+                      'y': U_G_mag
+                      color: abs_mag_LSST_u
+                    table: $table
+                    settings:
+                      pointSizeFactor: 2.8
+                      colorRamp: magma
+                      colorGammaFactor: 0.6
+                settings: {}
+            size:
+              width: 100%
+            settings: {}
+        size:
+          width: 100%
+        settings:
+          title: Luminosities
+      - type: verticalGroup
+        elements:
+          - type: horizontalGroup
+            elements:
+              - type: canvas2D
+                size:
+                  width: 100%
+                  height: 500px
+                layers:
+                  - type: points
+                    encodings:
+                      x: log_stellar_mass
+                      'y': log_gas_mass
+                      color: log_dark_matter_mass
+                    table: $table
+                    settings:
+                      pointSizeFactor: 2.6
+                settings:
+                  title: Stellar vs Gas Mass
+              - type: canvas2D
+                size:
+                  width: 100%
+                  height: 500px
+                layers:
+                  - type: points
+                    encodings:
+                      x: log_stellar_mass
+                      'y': log_dust_mass
+                      color: log_dark_matter_mass
+                    table: $table
+                    settings:
+                      pointSizeFactor: 2.4
+                settings:
+                  title: Stellar vs Dust Mass
+              - type: canvas2D
+                size:
+                  width: 100%
+                  height: 500px
+                layers:
+                  - type: points
+                    encodings:
+                      x: log_stellar_mass
+                      'y': log_stellar_half_mass_radius
+                      color: log_dark_matter_mass
+                    table: $table
+                    settings:
+                      colorRamp: default
+                      pointSizeFactor: 2.6
+                settings:
+                  title: Stellar Mass vs Size
+            size:
+              width: 100%
+            settings: {}
+          - type: horizontalGroup
+            elements:
+              - type: canvas2D
+                size:
+                  width: 100%
+                  height: 500px
+                layers:
+                  - type: points
+                    encodings:
+                      x: log_stellar_mass
+                      'y': log_SFR
+                      color: log_sSFR
+                    table: $table
+                    settings:
+                      colorRamp: greenOrange1
+                      colorGammaFactor: 0.75
+                      pointSizeFactor: 2.4
+                settings: {}
+              - type: canvas2D
+                size:
+                  width: 100%
+                  height: 500px
+                layers:
+                  - type: points
+                    encodings:
+                      x: log_dark_matter_mass
+                      'y': log_stellar_half_mass_radius
+                      color: log_sSFR
+                    table: $table
+                    settings:
+                      colorRamp: greenOrange1
+                      colorGammaFactor: 0.75
+                      pointSizeFactor: 2.6
+                settings: {}
+              - type: canvas2D
+                size:
+                  width: 100%
+                  height: 500px
+                layers:
+                  - type: histogram
+                    encodings:
+                      values: inclination
+                    table: $table
+                settings: {}
+            size:
+              width: 100%
+            settings: {}
+          - type: horizontalGroup
+            elements:
+              - type: canvas2D
+                size:
+                  width: 100%
+                  height: 450px
+                layers:
+                  - type: histogram
+                    encodings:
+                      values: log_stellar_mass
+                    table: $table
+                settings: {}
+              - type: canvas2D
+                size:
+                  width: 100%
+                  height: 450px
+                layers:
+                  - type: histogram
+                    encodings:
+                      values: log_gas_mass
+                    table: $table
+                settings: {}
+              - type: canvas2D
+                size:
+                  width: 100%
+                  height: 450px
+                layers:
+                  - type: histogram
+                    encodings:
+                      values: log_dust_mass
+                    table: $table
+                settings: {}
+            size:
+              width: 100%
+            settings: {}
+        size:
+          width: 100%
+        settings:
+          title: Physical Properties
+      - type: verticalGroup
+        elements:
+          - type: tableView
+            size:
+              height: 600px
+              width: 100%
+            table: $table
+            encodings: {}
+            settings:
+              columns:
+                - id: subhalo_id
+                  width: 90
+                - id: inclination
+                  width: 80
+                - id: stellar_half_mass_radius
+                  width: 120
+                - id: stellar_mass
+                  width: 110
+                - id: gas_mass
+                  width: 110
+                - id: dark_matter_mass
+                  width: 110
+                - id: total_dust_mass
+                  width: 110
+                - id: SFR
+                  width: 100
+                - id: abs_mag_GALEX_FUV
+                  width: 90
+                - id: abs_mag_GALEX_NUV
+                  width: 90
+                - id: abs_mag_LSST_u
+                  width: 90
+                - id: abs_mag_LSST_g
+                  width: 90
+                - id: abs_mag_LSST_r
+                  width: 90
+                - id: abs_mag_LSST_i
+                  width: 90
+                - id: abs_mag_LSST_z
+                  width: 90
+                - id: abs_mag_2MASS_J
+                  width: 90
+                - id: abs_mag_2MASS_H
+                  width: 90
+                - id: abs_mag_2MASS_Ks
+                  width: 90
+                - id: abs_mag_WISE_W1
+                  width: 90
+                - id: abs_mag_WISE_W2
+                  width: 90
+        size:
+          width: 100%
+        settings:
+          title: Catalog table
+    type: verticalGroup
+  actions:
+    - id: Ge12694c7_101c_41bd_93bd_a0b58f7b37f0
+      name: Open galaxy
+      targetTableId: $table
+      actionDef: |-
+        uri = 'tsa_'+subhalo_id;
+        concept_id = 'tsa_galaxy';
+        resourceIsPresent(uri) ? continue() :
+          compound(
+            data = fetchBinaryData('/data/source_files/tsa_galaxies/'+subhalo_id+'.h5'),
+            createResource(uri, 'TSA '+subhalo_id, "",
+                           concept_id, data, "HDF5", ""
+                          ),
+            continue()
+          );
+        openResource(uri)
+  computationRecipes:
+    $table:
+      - id: log_stellar_mass
+        name: log stellar mass
+        groupName: Derived Physical Properties
+        unitName: log Msun
+        expression: log10(stellar_mass)+6
+        description: ''
+        decimalDigits: 3
+      - id: log_gas_mass
+        name: log gas mass
+        groupName: Derived Physical Properties
+        unitName: log Msun
+        expression: log10(max(1E1, gas_mass))+6
+        description: ''
+        decimalDigits: 3
+      - id: log_dust_mass
+        name: log dust mass
+        groupName: Derived Physical Properties
+        expression: log10(max(1, total_dust_mass))+6
+        description: ''
+        unitName: log Msun
+        decimalDigits: 3
+      - id: log_dark_matter_mass
+        name: log dark matter mass
+        groupName: Derived Physical Properties
+        unitName: log Msun
+        expression: log10(dark_matter_mass)+6
+        description: ''
+        decimalDigits: 3
+      - id: log_stellar_half_mass_radius
+        name: log stellar half mass radius
+        groupName: Derived Physical Properties
+        expression: log10(stellar_half_mass_radius)
+        description: ''
+        unitName: log kpc
+        decimalDigits: 4
+      - id: log_SFR
+        name: log SFR
+        groupName: Derived Physical Properties
+        expression: log10(max(1E-5, SFR))
+        description: ''
+        unitName: log Msun/yr
+        decimalDigits: 3
+      - id: log_sSFR
+        name: log sSFR
+        groupName: Derived Physical Properties
+        expression: log_SFR - log_stellar_mass
+        description: ''
+        unitName: log /yr
+        decimalDigits: 3
+      - id: U_G_mag
+        name: U-G mag
+        groupName: Colors
+        expression: abs_mag_LSST_u-abs_mag_LSST_g
+        description: ''
+        unitName: mag
+        decimalDigits: 3
+      - id: G_J_mag
+        name: G-J mag
+        groupName: Colors
+        expression: abs_mag_LSST_g-abs_mag_2MASS_J
+        description: ''
+        unitName: mag
+        decimalDigits: 3
+      - id: rel_FUV
+        name: Mag FUV (norm)
+        groupName: Normalized Magnitudes
+        expression: abs_mag_GALEX_FUV - abs_mag_LSST_g
+        description: ''
+        unitName: mag
+        decimalDigits: 2
+      - id: rel_NUV
+        name: Mag NUV (norm)
+        groupName: Normalized Magnitudes
+        expression: abs_mag_GALEX_NUV - abs_mag_LSST_g
+        description: ''
+        unitName: mag
+        decimalDigits: 2
+      - id: rel_LSST_U
+        name: Mag LSST U (norm)
+        groupName: Normalized Magnitudes
+        expression: abs_mag_LSST_u - abs_mag_LSST_g
+        description: ''
+        unitName: mag
+        decimalDigits: 2
+      - id: rel_LSST_G
+        name: Mag LSST G (norm)
+        groupName: Normalized Magnitudes
+        expression: abs_mag_LSST_g - abs_mag_LSST_g
+        description: ''
+        unitName: mag
+        decimalDigits: 2
+      - id: rel_LSST_R
+        name: Mag LSST R (norm)
+        groupName: Normalized Magnitudes
+        expression: abs_mag_LSST_r - abs_mag_LSST_g
+        description: ''
+        unitName: mag
+        decimalDigits: 2
+      - id: rel_LSST_I
+        name: Mag LSST I (norm)
+        groupName: Normalized Magnitudes
+        expression: abs_mag_LSST_i - abs_mag_LSST_g
+        description: ''
+        unitName: mag
+        decimalDigits: 2
+      - id: rel_LSST_Z
+        name: Mag LSST Z (norm)
+        groupName: Normalized Magnitudes
+        expression: abs_mag_LSST_z - abs_mag_LSST_g
+        description: ''
+        unitName: mag
+        decimalDigits: 2
+      - id: rel_2MASS_J
+        name: Mag 2MASS J (norm)
+        groupName: Normalized Magnitudes
+        expression: abs_mag_2MASS_J - abs_mag_LSST_g
+        description: ''
+        unitName: mag
+        decimalDigits: 2
+      - id: rel_2MASS_H
+        name: Mag 2MASS H (norm)
+        groupName: Normalized Magnitudes
+        expression: abs_mag_2MASS_H - abs_mag_LSST_g
+        description: ''
+        unitName: mag
+        decimalDigits: 2
+      - id: rel_2MASS_Ks
+        name: Mag 2MASS Ks (norm)
+        groupName: Normalized Magnitudes
+        expression: abs_mag_2MASS_Ks - abs_mag_LSST_g
+        description: ''
+        unitName: mag
+        decimalDigits: 2
+      - id: rel_WISE_W1
+        name: Mag WISE W1 (norm)
+        groupName: Normalized Magnitudes
+        expression: abs_mag_WISE_W1 - abs_mag_LSST_g
+        description: ''
+        unitName: mag
+        decimalDigits: 2
+      - id: rel_WISE_W2
+        name: Mag WISE W2 (norm)
+        groupName: Normalized Magnitudes
+        expression: abs_mag_WISE_W2 - abs_mag_LSST_g
+        description: ''
+        unitName: mag
+        decimalDigits: 2

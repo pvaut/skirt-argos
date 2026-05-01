@@ -1,0 +1,38 @@
+.wrapper {
+    // position: absolute;
+    display: inline-block;
+    z-index: 1000;
+    padding: 12px;
+
+
+
+    background-color: color-mix(in srgb, var(--color-sp2) 65%, var(--color-bg3));
+    box-shadow: 0px 0px 16px color-mix(in srgb, var(--color-bg3) 60%, transparent),
+        0px 0px 20px color-mix(in srgb, var(--color-sp2) 100%, transparent) inset;
+    color: var(--color-bg3);
+
+    border-radius: 8px;
+    transition: opacity 0.15s ease-in-out;
+}
+
+.menuSeparator {
+    border-bottom: 1px solid var(--color-bg3);
+    padding-top: 5px;
+    margin-bottom: 5px;
+}
+
+.menuLine {
+    cursor: pointer;
+    padding: 5px 5px;
+    max-width: 350px;
+    font-weight: bold;
+
+    &:hover {
+        background: color-mix(in srgb, var(--color-fg) 50%, transparent);
+    }
+}
+
+.menuItemDescription {
+    font-size: 80%;
+    font-weight: normal;
+}

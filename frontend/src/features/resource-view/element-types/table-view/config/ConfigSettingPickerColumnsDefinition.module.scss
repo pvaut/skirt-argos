@@ -1,0 +1,28 @@
+
+
+.columnGroup {
+    border-top: 1px solid color-mix(in srgb, var(--color-fg) 35%, transparent);
+    
+}
+
+.column {
+    padding: 10px 0;
+    position: relative;
+    border-bottom: 1px solid color-mix(in srgb, var(--color-fg) 35%, transparent);
+
+    &:hover {
+        background: color-mix(in srgb, var(--color-fg) 5%, transparent);
+    }
+}
+
+.closeButton {
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    opacity: 0.5;
+
+    &:hover {
+        opacity: 1;
+    }
+}

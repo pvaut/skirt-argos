@@ -1,0 +1,152 @@
+name: A survey dashboard
+rootElement:
+  elements:
+  - elements:
+    - layers:
+      - encodings:
+          color: pgc
+          x: al2000
+          y: de2000
+        settings:
+          pointSizeFactor: 2
+        table: table
+        type: points
+      settings: {}
+      size:
+        height: 600px
+        width: 100%
+      type: canvas2D
+    - encodings:
+        categories: type
+      settings: {}
+      size:
+        height: 600px
+        width: 350px
+      table: table
+      type: categoricalFacet
+    settings: {}
+    size:
+      width: 100%
+    type: horizontalGroup
+  - elements:
+    - layers:
+      - encodings:
+          values: bt
+        settings:
+          yScaleType: log1pCount
+        table: table
+        type: histogram
+      settings: {}
+      size:
+        height: 450px
+        width: 100%
+      type: canvas2D
+    - layers:
+      - encodings:
+          values: it
+        settings:
+          yScaleType: log1pCount
+        table: table
+        type: histogram
+      settings: {}
+      size:
+        height: 450px
+        width: 100%
+      type: canvas2D
+    - layers:
+      - encodings:
+          values: brief
+        table: table
+        type: histogram
+      settings: {}
+      size:
+        height: 450px
+        width: 100%
+      type: canvas2D
+    settings: {}
+    size:
+      width: 100%
+    type: horizontalGroup
+  - elements:
+    - layers:
+      - encodings:
+          color: pgc
+          x: logd25
+          y: bt
+        settings:
+          colorRamp: rainbow
+          pointSizeFactor: 1.2
+          renderType: translucent
+        table: table
+        type: points
+      size:
+        height: 600px
+        width: 100%
+      type: canvas2D
+    - layers:
+      - encodings:
+          color: pgc
+          x: bt
+          y: it
+        settings:
+          colorRamp: rainbow
+          pointSizeFactor: 1.8
+          renderType: translucent
+        table: table
+        type: points
+      size:
+        height: 600px
+        width: 100%
+      type: canvas2D
+    settings: {}
+    size:
+      width: 100%
+    type: horizontalGroup
+  - elements:
+    - encodings: {}
+      settings:
+        columns:
+        - id: pgc
+          width: 150
+        - id: objname
+          width: 150
+        - id: al2000
+          width: 150
+        - id: de2000
+          width: 150
+        - id: type
+          width: 150
+        - id: logd25
+          width: 150
+        - id: e_logd25
+          width: 150
+        - id: logr25
+          width: 150
+        - id: e_logr25
+          width: 150
+        - id: brief
+          width: 150
+        - id: bt
+          width: 150
+        - id: e_bt
+          width: 150
+        - id: it
+          width: 150
+        - id: e_it
+          width: 150
+        - id: vdis
+          width: 150
+        - id: e_vdis
+          width: 150
+      size:
+        height: 600px
+        width: 100%
+      table: table
+      type: tableView
+    settings: {}
+    size:
+      width: 100%
+    type: horizontalGroup
+  type: verticalGroup
+targetConcept: survey
+templateId: survey_dashboard.yaml

@@ -1,0 +1,171 @@
+conceptDefinition:
+  isLocal: true
+  isTable: false
+  id: tng_snapshot
+  name: TNG snapshot
+  namePlural: ''
+  description: ''
+  tableConcepts:
+    - path: /Subhalo
+      nameSingle: Subhalo
+      namePlural: Subhalo
+      description: ''
+      propertyGroups: []
+      properties:
+        - path: /Subhalo/SubhaloPos
+          name: Position
+          description: ''
+          transformationExpression: x
+          groupId: null
+          dataType: vector3d
+          children:
+            - index: 0
+              name: Subhalo Pos - X
+              dataType: float
+            - index: 1
+              name: Subhalo Pos - Y
+              dataType: float
+            - index: 2
+              name: Subhalo Pos - Z
+              dataType: float
+          totalChildCount: 3
+        - path: /Subhalo/SubhaloVel
+          name: Velocity
+          description: ''
+          transformationExpression: x
+          groupId: null
+          dataType: vector3d
+          children:
+            - index: 0
+              name: Subhalo Vel - X
+              dataType: float
+            - index: 1
+              name: Subhalo Vel - Y
+              dataType: float
+            - index: 2
+              name: Subhalo Vel - Z
+              dataType: float
+          totalChildCount: 3
+        - path: /Subhalo/SubhaloSFR
+          name: Star formation rate
+          description: ''
+          transformationExpression: x
+          groupId: null
+          dataType: float
+          children: []
+        - path: /Subhalo/SubhaloGasMetallicity
+          name: Gas Metallicity
+          description: ''
+          transformationExpression: x
+          groupId: null
+          dataType: float
+          children: []
+        - path: /Subhalo/SubhaloStarMetallicity
+          name: Star Metallicity
+          description: ''
+          transformationExpression: x
+          groupId: null
+          dataType: float
+          children: []
+      labelColumnPath: null
+  globalAttributeDefs: []
+dashboardTemplate:
+  targetConcept: tng_snapshot
+  templateId: autoTemplate_concept_Gfce35e18_f254_40e9_8ca6_bb7392d13b3d.yaml
+  name: Template for TNG snapshot
+  rootElement:
+    elements:
+      - type: horizontalGroup
+        elements:
+          - type: canvasVolume
+            size:
+              width: 60%
+              height: 750px
+            layers:
+              - type: volumePointsVelocity
+                encodings:
+                  position: SubhaloPos
+                  velocity: SubhaloVel
+                table: $Subhalo
+                settings:
+                  velocityVectorSize: 0
+                  pointSizeFactor: 1.0
+            settings: {}
+          - type: verticalGroup
+            elements:
+              - type: canvas2D
+                size:
+                  width: 100%
+                  height: 250px
+                layers:
+                  - type: histogram
+                    encodings:
+                      values: Star_formation_rate__transformed_
+                    table: $Subhalo
+                    settings:
+                      yScaleType: log1pCount
+                settings: {}
+              - type: canvas2D
+                size:
+                  width: 100%
+                  height: 250px
+                layers:
+                  - type: histogram
+                    encodings:
+                      values: Gas_metallicity__transformed_
+                    table: $Subhalo
+                    settings:
+                      yScaleType: log1pCount
+                settings: {}
+              - type: canvas2D
+                size:
+                  width: 100%
+                  height: 250px
+                layers:
+                  - type: histogram
+                    encodings:
+                      values: Star_metallicity__transformed_
+                    table: $Subhalo
+                    settings:
+                      yScaleType: log1pCount
+                settings: {}
+            size:
+              width: 40%
+            settings:
+              title: ''
+        size:
+          width: 100%
+        settings: {}
+      - type: horizontalGroup
+        elements:
+          - type: canvas2D
+            size:
+              width: 100%
+              height: 800px
+            layers:
+              - type: points
+                encodings:
+                  x: Star_metallicity__transformed_
+                  'y': Gas_metallicity__transformed_
+                  color: Star_formation_rate__transformed_
+                table: $Subhalo
+                settings:
+                  colorGammaFactor: 0.26
+                  pointSizeFactor: 2.8
+                  renderType: opaque
+            settings: {}
+        size:
+          width: 100%
+        settings: {}
+    type: verticalGroup
+  computationRecipes:
+    $Subhalo:
+      - id: Star_formation_rate__transformed_
+        name: Star formation rate (transformed)
+        expression: 1+log10(0.1+SubhaloSFR)
+      - id: Gas_metallicity__transformed_
+        name: Gas metallicity (transformed)
+        expression: 3+log10(0.001+SubhaloGasMetallicity)
+      - id: Star_metallicity__transformed_
+        name: Star metallicity (transformed)
+        expression: 3+log10(.001+SubhaloStarMetallicity)

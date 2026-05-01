@@ -1,0 +1,39 @@
+name: Example table dashboard
+rootElement:
+  elements:
+  - layers:
+    - encodings:
+        color: z
+        slice: ''
+        x: x
+        y: y
+      settings:
+        pointSizeFactor: 5
+      table: table
+      type: points
+    settings:
+      title: Example chart
+    size:
+      height: 600px
+      width: 100%
+    type: canvas2D
+  - elements: []
+    encodings: {}
+    settings:
+      columns:
+      - id: x
+        width: 250
+      - id: y
+        width: 250
+      - id: z
+        width: 250
+      - id: label
+        width: 250
+    size:
+      height: 400px
+      width: 100%
+    table: table
+    type: tableView
+  type: verticalGroup
+targetConcept: example_table
+templateId: example_table_dashboard.yaml

@@ -1,0 +1,8 @@
+id: static_cutout_282784
+name: "TNG282784"
+description: "Example subhalo cutout from the TNG simulation suite"
+dataSourceType: HDF5
+creationTimeStamp: 2024-01-01
+dataFile: static_cutout_282784.hdf5
+conceptId: static_tng_cutout
+thumbnail: 'TNG_cutout_282784.jpg'

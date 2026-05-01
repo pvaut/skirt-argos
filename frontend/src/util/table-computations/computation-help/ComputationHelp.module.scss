@@ -1,0 +1,23 @@
+
+
+.wrapper {
+
+}
+
+.line {
+    padding: 6px 0;
+}
+
+.operator {
+    display: inline-block;
+    font-family: monospace;
+    padding: 0 5px;
+    background-color: var(--color-bg1);
+    color: rgb(0,255,255);
+}
+
+.description {
+    padding-left: 15px;
+    padding-top: 3px;;
+    opacity: 60%;
+}

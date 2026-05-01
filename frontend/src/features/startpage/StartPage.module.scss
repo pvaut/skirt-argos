@@ -1,0 +1,236 @@
+.body {
+    padding: 30px;
+    overflow-y: auto;
+
+    h2 {
+        padding-bottom: 2px;
+        border-bottom: 2px solid color-mix(in srgb, var(--color-sp1) 50%, transparent);
+    }
+}
+
+
+.linkTileWrapper {
+    position: relative;
+    margin: 15px;
+    display: inline-block;
+    width: var(--resource-tile-width);
+    height: var(--resource-tile-height);
+    cursor: pointer;
+
+    transition: transform 0.2s;
+
+    &:hover {
+        transform: scale(1.03);
+    }
+
+}
+
+.linkTile {
+    width: var(--resource-tile-width);
+    height: var(--resource-tile-height);
+    overflow: hidden;
+    background-color: var(--color-bg2);
+    border-radius: 10px;
+    // border: 1px solid color-mix(in srgb, var(--color-sp1) 50%, var(--color-bg2));
+    box-shadow: 0 0 15px var(--color-shadow1);
+    line-height: 1.25;
+
+    &:hover {
+        box-shadow: 0 0 15px var(--color-shadow1strong);
+    }
+
+}
+
+.linkTileThumbnail {
+    width: 140px; //var(--resource-tile-height);
+    height: var(--resource-tile-height);
+    display: inline-block;
+    vertical-align: top;
+    overflow: hidden;
+    position: relative;
+    background-color: var(--color-bg3);
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        display: block;
+    }
+}
+
+.thumbnailOverlay {
+    position: absolute;
+    top: -0;
+    left: -0;
+    width: 100%;
+    height: 100%;
+    // border-radius: 10px;
+    background: linear-gradient(130deg,
+            color-mix(in srgb, var(--color-sp1) 15%, transparent) 0%,
+            color-mix(in srgb, var(--color-sp1) 30%, transparent) 50%,
+            color-mix(in srgb, var(--color-sp1) 25%, transparent) 50%,
+            color-mix(in srgb, var(--color-sp1) 20%, transparent) 80%,
+            color-mix(in srgb, var(--color-sp1) 10%, transparent) 100%,
+        );
+
+    box-shadow: 0 0 10px var(--color-bg2) inset, 0 0 7px var(--color-bg2) inset;
+}
+
+.linkTileContent {
+    display: inline-block;
+    vertical-align: top;
+    box-sizing: border-box;
+    width: calc(var(--resource-tile-width) - 140px);
+    height: var(--resource-tile-height);
+    padding: 10px;
+}
+
+.linkConceptName {
+    font-weight: 100;
+    font-size: 80%;
+    opacity: 0.7;
+}
+
+.linkResourceName {
+
+
+    box-sizing: border-box;
+    font-weight: bold;
+    font-size: 110%;
+    background-color: var(--color-bg2);
+    position: relative;
+    left: -50px;
+    width: 250px;
+    padding: 10px;
+    // white-space: nowrap;
+    // width: 100%;
+
+    line-height: 150%;
+
+    text-decoration: underline;
+    text-decoration-color: var(--color-sp1);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+
+}
+
+.linkResourceDescr {
+    // white-space: nowrap;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    font-size: 80%;
+}
+
+.linkHoverButtonWrapper {
+    // display: none;
+    opacity: 0;
+    position: absolute;
+    top: 5px;
+    right: -18px;
+    transition: opacity 0.3s;
+}
+
+.linkTileWrapper:hover {
+    .linkHoverButtonWrapper {
+        display: inline;
+        opacity: 1;
+    }
+}
+
+.loadingOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: color-mix(in srgb, var(--color-bg3) 50%, transparent);
+    text-align: center;
+    backdrop-filter: blur(2px);
+}
+
+.tilesGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, calc(var(--resource-tile-width) + 30px));
+    /* fixed-size tiles */
+    justify-content: center;
+    /* center full rows */
+    // gap: 1rem;
+
+}
+
+.searchBarWrapper {
+    padding: 40px 0;
+    text-align: center;
+    ;
+
+    input {
+        border: none;
+        outline: none;
+        background-color: color-mix(in srgb, var(--color-fg) 20%, transparent);
+        padding: 5px 15px;
+        font-weight: bold;
+
+        box-sizing: border-box;
+        width: 420px;
+        height: 44px;
+        border-radius: 22px;
+        background-color: color-mix(in srgb, var(--color-sp1) 20%, var(--color-bg2));
+        border: 1px solid var(--color-sp1);
+        color: var(--color-sp2);
+        text-align: left;
+        line-height: 34px;
+        cursor: pointer;
+        font-size: 110%;
+
+        transition: transform 0.2s, opacity 0.4s;
+
+        box-shadow: 0 0 7px color-mix(in srgb, var(--color-sp1) 50%, transparent),
+            0 0 7px color-mix(in srgb, var(--color-sp1) 50%, transparent) inset;
+
+
+    }
+}
+
+
+.conceptTagSet {
+    display: inline-block;
+    text-align: center;
+    margin: 20px 0 40px;
+    border-top: 2px solid var(--color-sp1);
+    border-bottom: 2px solid var(--color-sp1);
+}
+
+.conceptTag,
+.conceptTagActive {
+    display: inline-block;
+    font-size: 110%;
+    font-weight: bold;
+    padding: 15px;
+    margin: 0px;
+    // border-radius: 10px;
+
+    // text-decoration: underline;
+    // text-decoration-color: var(--color-sp1);
+    // text-decoration-thickness: 2px;
+    // text-underline-offset: 3px;
+
+    cursor: pointer;
+
+
+
+    transition: transform 0.2s;
+
+    &:hover {
+        color: color-mix(in srgb, var(--color-sp2) 75%, var(--color-fg));
+    }
+}
+
+.conceptTag:hover {
+    background-color: color-mix(in srgb, var(--color-sp1) 10%, transparent);
+}
+
+.conceptTagActive {
+    background-color: color-mix(in srgb, var(--color-sp1) 40%, transparent);
+}

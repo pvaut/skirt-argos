@@ -1,0 +1,185 @@
+.wrapper {
+    width: calc(100% - 20px);
+    height: calc(100% - 10px);
+    padding: 10px 10px 0px 10px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.pagerWrapper {
+    display: inline-block;
+    width: 170px;
+    height: 40px;
+    line-height: 40px;
+    vertical-align: top;
+    padding-left: 5px;
+    color: var(--color-sp1);
+    font-weight: bold;
+    //background-color: color-mix(in srgb, var(--color-fg) 20%, transparent);
+
+
+    button {
+        display: block;
+        background-color: transparent;
+        padding: 0;
+        margin: 0;
+        width: 15px;
+        height: 20px;
+        line-height: 20px;
+        font-size: 20px;
+        border: none;
+        cursor: pointer;
+        //opacity: 0.6;
+        color: var(--color-sp1);
+
+        &:hover {
+            opacity: 1 !important;
+            //background-color: color-mix(in srgb, var(--color-fg) 25%, transparent);
+        }
+    }
+}
+
+.pagerText {
+    display: inline-block;
+    padding-left: 5px;
+    height: 40px;
+    line-height: 40px;
+    vertical-align: top;
+}
+
+
+
+.title {
+    box-sizing: border-box;
+    display: inline-block;
+    width: calc(100% - 200px);
+    text-align: center;
+    font-size: 18px;
+    //color: var(--color-sp1);
+    padding: 10px 0;
+}
+
+.tableWrapper {
+    width: 100%;
+    height: calc(100% - 45px);
+    overflow-x: auto;
+    font-size: 90%;
+
+
+    table {
+        table-layout: fixed;
+        border-collapse: collapse;
+    }
+
+    thead tr {
+        border-bottom: 1px solid color-mix(in srgb, var(--color-fg) 50%, var(--color-bg3));
+        //height: var(--table-row-height) !important;
+    }
+
+    thead td {
+        font-weight: bold;
+        //color: var(--color-sp1);
+        background-color: color-mix(in srgb, var(--color-fg) 25%, transparent);
+        text-align: center;
+        overflow: hidden;
+        // white-space: nowrap;
+        text-overflow: ellipsis;
+        padding: 4px;
+        margin: 0;
+
+        height: 30px;
+        vertical-align: top;
+    }
+
+    tbody tr {
+        //border-bottom: 1px dotted color-mix(in srgb, var(--color-fg) 25%, var(--color-bg3));
+        //height: var(--table-row-height) !important;
+        cursor: pointer;
+
+        //background-color: red;
+
+        &:hover {
+            background-color: color-mix(in srgb, var(--color-fg) 10%, var(--color-bg3));
+        }
+    }
+
+    td {
+        //padding: 4px;
+        //height: var(--table-row-height) !important;
+        margin: 0;
+        //font-size: 11px;
+        border: 1px dotted color-mix(in srgb, var(--color-fg) 25%, var(--color-bg3));
+    }
+
+
+    .cell {
+        box-sizing: border-box;
+        padding: 2px;
+        height: 22px;
+        // line-height: 25px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+}
+
+.twoLines {
+    display: -webkit-box;
+    /* creates a flex-like box */
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    /* number of lines to show */
+    overflow: hidden;
+}
+
+.selectionBoxUnsel,
+.selectionBoxSel {
+    cursor: pointer;
+    opacity: 0.4;
+    text-align: center;
+    transition: transform 0.2s;
+
+    &:hover {
+        opacity: 0.75;
+        transform: scale(1.2);
+    }
+}
+
+.selectionBoxSel {
+    opacity: 0.85;
+    color: var(--color-sp2);
+
+    &:hover {
+        opacity: 1;
+    }
+}
+
+
+.searchRow {
+    td {
+        border: none;
+    }
+
+    input {
+        border: none;
+        outline: none;
+        background-color: color-mix(in srgb, var(--color-fg) 20%, transparent);
+        padding: 5px 8px;
+        border-radius: 12px;
+        //height: 24px;
+    }
+
+    input:not(:placeholder-shown) {
+        background-color: color-mix(in srgb, var(--color-sp2) 30%, transparent);
+        box-shadow: 0 0 4px color-mix(in srgb, var(--color-sp2) 60%, transparent) inset;
+        color: var(--color-sp2);
+    }
+}
+
+.highlight {
+    background-color: color-mix(in srgb, var(--color-sp2) 30%, transparent);
+    color: var(--color-sp2);
+    border-radius: 3px;
+    box-shadow: 0 0 4px color-mix(in srgb, var(--color-sp2) 60%, transparent) inset;
+
+}

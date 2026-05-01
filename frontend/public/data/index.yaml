@@ -1,0 +1,39 @@
+resources:
+  - uri: static_cutout_282784
+    version: 2
+  - uri: tng479290
+    version: 1
+  - uri: tng300_snapshot_099
+    version: 1
+  - uri: tng300_snapshot_099_subsampled
+    version: 1
+  - uri: tsa_catalog
+    version: 1
+  - uri: eagle_snapshot_ref_028
+    version: 1
+
+  # - uri: hyperleda
+  #   version: 1
+
+
+
+
+
+
+concepts:
+  - id: static_tng_cutout
+    version: 3
+  - id: tng_snapshot
+    version: 2
+  - id: tng_galaxy
+    version: 1
+  - id: tsa_catalog
+    version: 1
+  - id: tsa_galaxy
+    version: 1
+  - id: eagle_snapshot
+    version: 1
+  
+
+  # - id: hyperleda
+  #   version: 2

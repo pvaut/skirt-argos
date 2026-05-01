@@ -1,0 +1,8 @@
+id: hyperleda
+name: "Hyperleda galaxies"
+description: "This example set contains Hyperleda galaxies with a Bt magnitude down to 20."
+dataSourceType: TSV
+creationTimeStamp: 2024-01-06
+dataFile: hyperLeda_meandata_galaxy_mag20.tsv
+conceptId: hyperleda
+thumbnail: 'hyperleda.jpg'

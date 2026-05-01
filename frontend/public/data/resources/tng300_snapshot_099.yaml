@@ -1,0 +1,8 @@
+id: tng300_snapshot_099
+name: "TNG300 Snapshot z=0 (full)"
+description: "All 14.5 million subhalos from the TNG300 099 snapshot *(needs a fast computer to render at sufficient speed)*"
+dataSourceType: HDF5
+creationTimeStamp: 2024-01-04
+dataFile: TNG_snapshot_099.hdf5
+conceptId: tng_snapshot
+thumbnail: 'tng_snapshot.jpg'

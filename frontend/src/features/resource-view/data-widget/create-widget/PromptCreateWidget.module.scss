@@ -1,0 +1,166 @@
+.wrapper {
+    width: 800px;
+    height: 80vh;
+}
+
+.leftPart {
+    display: inline-block;
+    width: 400px;
+    height: 100%;
+    background: color-mix(in srgb, var(--color-sp1) 45%, var(--color-bg3));
+    overflow: auto;
+    vertical-align: top;
+}
+
+.columns {}
+
+.column,
+.columnSelected,
+.columnDisabled {
+    box-sizing: border-box;
+    position: relative;
+    padding: 3px 10px 10px 40px;
+    height: 24px;
+    //overflow: hidden;
+    white-space: nowrap;
+    // text-overflow: ellipsis;
+    cursor: pointer;
+    // border-bottom: 1px dashed color-mix(in srgb, var(--color-fg) 10%, transparent);
+    // background: linear-gradient(to bottom,
+    //         color-mix(in srgb, var(--color-sp1) 48%, var(--color-bg3)),
+    //         color-mix(in srgb, var(--color-sp1) 45%, var(--color-bg3)));
+}
+
+.column {
+    &:hover {
+        background: linear-gradient(to bottom,
+                color-mix(in srgb, var(--color-sp1) 60%, var(--color-bg3)),
+                color-mix(in srgb, var(--color-sp1) 55%, var(--color-bg3)));
+    }
+}
+
+.columnSelected {
+    background: color-mix(in srgb, var(--color-sp1) 80%, var(--color-bg3));
+
+    &:hover {
+        background: var(--color-sp1);
+    }
+}
+
+.columnDisabled {
+    opacity: 0.3;
+}
+
+.colSelIndicator {
+    position: absolute;
+    top: 3px;
+    left: 10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--color-fg);
+    color: var(--color-bg3);
+    text-align: center;
+    line-height: 20px;
+}
+
+.group {
+    box-sizing: border-box;
+    position: relative;
+    padding: 3px 10px 10px 40px;
+    height: 24px;
+    cursor: pointer;
+    // border-bottom: 1px dashed color-mix(in srgb, var(--color-fg) 10%, transparent);
+    font-weight: bold;
+    font-style: italic;
+    color: var(--color-sp1);
+    white-space: nowrap;
+}
+
+.identifier {
+    font-family: monospace;
+    opacity: 0.7;
+    padding: 2px 0 4px 0;
+}
+
+.dataType {
+    font-family: monospace;
+    opacity: 0.4;
+}
+
+.tableActive,
+.table {
+    // box-sizing: border-box;;
+    // height: 36px;
+    //background-color: color-mix(in srgb, var(--color-sp1) 30%, var(--color-bg3));
+    font-weight: bold;
+    font-size: 110%;
+    padding: 20px 10px;
+    cursor: pointer;
+    border-bottom: 2px solid var(--color-fg);
+    margin-top: 6px;
+    ;
+    margin-left: 6px;
+    text-align: center;
+}
+
+.tableActive {
+    background-color: color-mix(in srgb, var(--color-sp1) 40%, var(--color-bg1));
+    color: var(--color-sp2);
+}
+
+.tableDescription {
+    font-size: 80%;
+    font-weight: lighter;
+}
+
+.widgetArea {
+    box-sizing: border-box;
+    display: inline-block;
+    width: 400px;
+    height: 100%;
+    overflow-y: auto;
+    background: var(--color-bg2);
+    vertical-align: top;
+    border: 6px solid color-mix(in srgb, var(--color-sp1) 45%, var(--color-bg3));
+}
+
+.widgetWrapper {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 15px;
+
+    &:hover {
+        background: var(--color-bg2);
+    }
+}
+
+.widgetMessage {
+    padding: 15px;
+    font-style: italic;
+    text-align: center;
+}
+
+.widget {
+    width: 100%;
+    height: 300px;
+    position: relative;
+    //transform: scale(0.5) translate(-50%, -50%);
+}
+
+.widgetBox {
+    width: 200%;
+    height: 200%;
+    position: relative;
+    transform: scale(0.5) translate(-50%, -50%);
+}
+
+.widgetOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    cursor: pointer;
+}
